@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { useState } from 'react'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+import { mobileSideSpacing } from '@/modules/utils'
 
 const NavLinks = [
   { label: 'Home', path: '/' },
@@ -15,18 +16,14 @@ interface NavLink {
   label: string
   path: string
 }
-interface Props {
-  responsiveLayout: string
-}
 
-const Navbar = ({responsiveLayout}:Props) => {
+const Navbar = ({}) => {
   const [mobileMenuClicked, setMobileMenuClicked] = useState(false)
-
   return (
     <>
       <div
         className={
-          `absolute xl:max-w-[1340px] top-5 w-full h-20 py-30 flex items-center justify-between ${responsiveLayout}`
+          `absolute xl:max-w-[1340px] top-5 w-full h-20 py-30 flex items-center justify-between ${mobileSideSpacing}`
         }
       >
         <div className='flex items-center justify-center space-x-10'>
@@ -89,10 +86,5 @@ const Navbar = ({responsiveLayout}:Props) => {
     </>
   )
 }
-/**
- * ${
-          mobileMenuClicked ? '0' : 'full'
-        }
- */
 
 export default Navbar
