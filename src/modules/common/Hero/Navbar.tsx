@@ -15,13 +15,20 @@ interface NavLink {
   label: string
   path: string
 }
+interface Props {
+  responsiveLayout: string
+}
 
-const Navbar = () => {
+const Navbar = ({responsiveLayout}:Props) => {
   const [mobileMenuClicked, setMobileMenuClicked] = useState(false)
 
   return (
     <>
-      <div className='absolute xl:max-w-[1360px] mx-auto top-5 w-full h-20 py-30 flex items-center justify-between lg:px-0 md:px-20 sm:px-2 xsm:px-5'>
+      <div
+        className={
+          `absolute xl:max-w-[1340px] top-5 w-full h-20 py-30 flex items-center justify-between ${responsiveLayout}`
+        }
+      >
         <div className='flex items-center justify-center space-x-10'>
           <h1 className='text-2xl text-white font-serif font-bold bg-green'>
             Al Bukhari
@@ -56,7 +63,8 @@ const Navbar = () => {
       </div>
       {/* mobile navbar */}
       <div
-        className={`fixed top-0 h-full left-full w-screen bg-transparent flex justify-end slideFromRight`} style={{left: mobileMenuClicked ? '0' : '100%'}}
+        className={`fixed top-0 h-full left-full w-screen bg-transparent flex justify-end slideFromRight z-10`}
+        style={{ left: mobileMenuClicked ? '0' : '100%' }}
       >
         <div className='relative md:w-2/5 xsm:w-1/2 bg-white h-full py-14 md:px-8 xsm:px-4'>
           <div
