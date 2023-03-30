@@ -47,7 +47,7 @@ const Navbar = () => {
         <div className='flex space-x-6 w-fit lg:hidden'>
           {/* mobile accordion toggle button */}
           <div
-            onClick={() => setMobileMenuClicked(true)}
+            onClick={() => setMobileMenuClicked(!mobileMenuClicked)}
             className='cursor-pointer'
           >
             <AiOutlineMenu color='white' size='35' />
@@ -56,9 +56,7 @@ const Navbar = () => {
       </div>
       {/* mobile navbar */}
       <div
-        className={`fixed top-0 left-${
-          mobileMenuClicked === true ? '0' : 'full'
-        } h-full w-screen bg-transparent flex justify-end slideFromRight`}
+        className={`fixed top-0 h-full left-full w-screen bg-transparent flex justify-end slideFromRight`} style={{left: mobileMenuClicked ? '0' : '100%'}}
       >
         <div className='relative md:w-2/5 xsm:w-1/2 bg-white h-full py-14 md:px-8 xsm:px-4'>
           <div
