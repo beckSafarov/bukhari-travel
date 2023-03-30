@@ -21,9 +21,9 @@ const Navbar = () => {
 
   return (
     <>
-      <div className='relative h-20 py-30 flex items-center justify-between md:px-20 sm:px-2 xsm:px-5'>
+      <div className='absolute xl:max-w-[1360px] mx-auto top-5 w-full h-20 py-30 flex items-center justify-between lg:px-0 md:px-20 sm:px-2 xsm:px-5'>
         <div className='flex items-center justify-center space-x-10'>
-          <h1 className='text-2xl text-white font-serif font-bold'>
+          <h1 className='text-2xl text-white font-serif font-bold bg-green'>
             Al Bukhari
           </h1>
           {/* menu */}
@@ -39,8 +39,8 @@ const Navbar = () => {
             ))}
           </div>
         </div>
-        <div className='md:hidden sm:hidden xsm:hidden'>
-          <button className='text-white border-2 border-gray rounded-full py-1.5 px-5 text-sm'>
+        <div className='lg:block md:hidden sm:hidden xsm:hidden'>
+          <button className='text-white border-2 border-gray rounded-full py-1.5 px-5 text-sm hover:bg-orange hover:border-orange transition duration-450'>
             Contact Us
           </button>
         </div>

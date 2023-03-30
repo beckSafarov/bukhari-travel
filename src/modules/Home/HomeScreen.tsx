@@ -1,5 +1,4 @@
 import Layout from '@/modules/common/Layout'
-import Navbar from '@/modules/common/Navbar'
 import Hero from '../common/Hero'
 
 export default function HomeScreen() {
