@@ -57,7 +57,7 @@ const Navbar = () => {
       {/* mobile navbar */}
       <div
         className={`fixed top-0 left-${
-          mobileMenuClicked ? '0' : 'full'
+          mobileMenuClicked === true ? '0' : 'full'
         } h-full w-screen bg-transparent flex justify-end slideFromRight`}
       >
         <div className='relative md:w-2/5 xsm:w-1/2 bg-white h-full py-14 md:px-8 xsm:px-4'>
