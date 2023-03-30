@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className='relative h-20 lg:px-20 py-30 flex items-center justify-between md:px-20 sm:px-2 xsm:px-5'>
+      <div className='relative h-20 py-30 flex items-center justify-between md:px-20 sm:px-2 xsm:px-5'>
         <div className='flex items-center justify-center space-x-10'>
           <h1 className='text-2xl text-white font-serif font-bold'>
             Al Bukhari

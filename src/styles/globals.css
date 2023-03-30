@@ -17,3 +17,7 @@
 .slideFromRight{
   transition: 0.5s;
 }
+
+.maxWidth{
+  width: 1280px;
+}
