@@ -19,10 +19,12 @@ module.exports = {
       'black-light':"#343641",
       'red':"#eb0202",
       'blue':'blue',
+      'green':'green',
       'black-blurred':'rgba(0, 0, 0, 0.3)',
       'white':'white',
       'white-dimmed':'rgba(255, 255, 255, 0.7)',
-      'orange':'#F1863B'
+      'orange':'#F1863B',
+      'yellow':'yellow'
     },
     fontFamily: {
       serif: ['"Playfair Display"', 'serif'],

@@ -27,7 +27,7 @@ const Navbar = ({}) => {
         }
       >
         <div className='flex items-center justify-center space-x-10'>
-          <h1 className='text-2xl text-white font-serif font-bold bg-green'>
+          <h1 className='text-2xl text-white font-serif font-bold'>
             Al Bukhari
           </h1>
           {/* menu */}
