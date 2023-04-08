@@ -1,7 +1,7 @@
 import Layout from '@/modules/common/Layout'
 import Hero from '../common/Hero/Hero'
 import AboutUsSection from './AboutUsSection'
-import ServicesSection from './ServicesSection'
+import ServicesSection from './ServicesSection/index'
 
 export default function HomeScreen() {
   return (

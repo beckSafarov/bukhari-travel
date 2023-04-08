@@ -1,14 +1,13 @@
 import React from 'react'
+import { TitleTypes } from './types'
 
-interface TitleProps {
-  children: React.ReactNode,
-  color: string,
-  fontSize: string,
-}
-
-const Title = ({children, ...rest}:TitleProps) => {
+const Title = ({children, ...rest}:TitleTypes) => {
+  const className = rest?.className
   return (
-    <h1 className='font-serif xl:text-6xl xsm:text-5xl leading-tight font-bold' style={rest}>
+    <h1
+      className={`font-serif xl:text-6xl xsm:text-5xl leading-tight font-bold ${className}`}
+      style={rest}
+    >
       {children}
     </h1>
   )
