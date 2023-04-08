@@ -1,10 +1,8 @@
 import React from 'react'
+import { SecondaryTitleTypes } from './types'
 
 
-interface SupTitleProps {
-  children:React.ReactNode
-}
-const SupTitle = ({children}:SupTitleProps) => {
+const SupTitle = ({children}:SecondaryTitleTypes) => {
   return (
     <p className='text-orange text-4 font-sans font-semibold mb-2'>{children}</p>
   )
