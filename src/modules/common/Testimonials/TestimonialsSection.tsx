@@ -7,8 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 import Card from "./Card";
 
-import Title from "../Title";
-import SupTitle from "../SupTitle";
+import Title from "../Typography/Title";
+import SupTitle from "../Typography/SupTitle";
 
 export default class TestimonialsSection extends Component {
   render() {

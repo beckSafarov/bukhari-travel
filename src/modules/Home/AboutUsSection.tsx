@@ -57,3 +57,4 @@ const AboutUsSection = () => {
    </SectionsContainer>
   )
 }
+export default AboutUsSection;

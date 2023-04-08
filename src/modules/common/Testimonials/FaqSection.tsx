@@ -1,6 +1,6 @@
 import React from "react";
-import SupTitle from "../SupTitle";
-import Title from "../Title";
+import SupTitle from "../Typography/SupTitle";
+import Title from "../Typography/Title";
 
 const FaqSection = () => {
   return (
