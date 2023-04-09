@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SupTitle from "../../common/Typography/SupTitle";
 import Title from "../../common/Typography/Title";
-import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import { FaPlus, FaMinus } from "react-icons/fa";
 import { Playfair_Display } from "@next/font/google";
 
 const playfair = Playfair_Display({
@@ -51,22 +51,18 @@ const FaqSection = () => {
             <div
               className={`${
                 index === openIndex ? "bg-orange text-white" : ""
-              } cursor-pointer transition-all duration-500`}
+              } cursor-pointer transition-all duration-300`}
               onClick={() => setOpenIndex(index === openIndex ? null : index)}
             >
               <div className={` flex p-3  align-middle cursor-pointer`}>
-                <span className={`text-base  pr-2 pt-1 font-extrabold`}>
-                  {index === openIndex ? (
-                    <AiOutlineMinus className="  " />
-                  ) : (
-                    <AiOutlinePlus className="" />
-                  )}
+                <span className={`text-base pr-2 pt-1 `}>
+                  {index === openIndex ? <FaMinus /> : <FaPlus />}
                 </span>
 
                 <h2
-                  className={`${
-                    index === openIndex ? "font-extrabold" : ""
-                  } text-base font-normal font-sans`}
+                  className={` ${
+                    index === openIndex ? " font-black" : "font-normal"
+                  } text-base  font-sans`}
                 >
                   {item.question}
                 </h2>
