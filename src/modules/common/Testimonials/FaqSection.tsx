@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SupTitle from "../Typography/SupTitle";
 import Title from "../Typography/Title";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
-import { Collapse } from "react-collapse";
+
 
 const FaqSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
