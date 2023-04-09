@@ -23,7 +23,7 @@ const DestinationCard = ({title, image, price, subtitle}:DestinationCardType) =>
         </div>
       </div>
       <div className='flex flex-col space-y-3'>
-        <Title className='xl:text-3xl'>{title}</Title>
+        <h3 className='font-serif xl:text-2xl font-bold'>{title}</h3>
         <SubTitle>{subtitle}</SubTitle>
       </div>
     </div>
