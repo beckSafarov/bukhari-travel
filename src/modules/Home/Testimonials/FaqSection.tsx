@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import SupTitle from "../../common/Typography/SupTitle";
 import Title from "../../common/Typography/Title";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import { Playfair_Display } from "@next/font/google";
 
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["700"],
+});
 const FaqSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const data = [
@@ -46,22 +51,29 @@ const FaqSection = () => {
               } cursor-pointer transition-all`}
               onClick={() => setOpenIndex(index === openIndex ? null : index)}
             >
-              <div className="flex p-3 font-sans font-medium align-middle cursor-pointer">
-                <span className=" text-xl pr-2 pt-1">
+              <div className={` flex p-3  align-middle cursor-pointer`}>
+                <span className={`text-base  pr-2 pt-1 font-extrabold`}>
                   {index === openIndex ? (
-                    <AiOutlineMinus className=" font-serif " />
+                    <AiOutlineMinus className="  " />
                   ) : (
                     <AiOutlinePlus className="" />
                   )}
                 </span>
-                <h2 className=" text-xl ">{item.question}</h2>
+
+                <h2
+                  className={`${
+                    index === openIndex ? "font-extrabold" : ""
+                  } text-base font-normal font-sans`}
+                >
+                  {item.question}
+                </h2>
               </div>
             </div>
 
             <div
               className={`${
                 index === openIndex ? "block" : "hidden"
-              } mt-[15px] px-5`}
+              } mt-[15px] px-5 text-sm`}
             >
               {item.content}
             </div>
