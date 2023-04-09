@@ -2,6 +2,7 @@ import Layout from '@/modules/common/Layout'
 import Hero from '../common/Hero/Hero'
 import AboutUsSection from './AboutUsSection'
 import ServicesSection from './ServicesSection/index'
+import BlogSection from './BlogSection'
 
 export default function HomeScreen() {
   return (
@@ -9,6 +10,7 @@ export default function HomeScreen() {
       <Hero/>
       <AboutUsSection/>
       <ServicesSection/>
+      <BlogSection/>
     </Layout>
   )
 }
