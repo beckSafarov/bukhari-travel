@@ -37,18 +37,21 @@ const FaqSection = () => {
     },
   ];
   return (
-    <div className="pb-20">
+    <div className="pb-20 transition-all duration-700">
       <SupTitle>FAQ</SupTitle>
       <Title>
         Frequently Asked <br /> Questions
       </Title>
       <div className="pb-10 mt-5">
         {data.map((item, index) => (
-          <div className=" pt-3 pb-3 cursor-pointer" key={index}>
+          <div
+            className=" pt-3 pb-3 cursor-pointer transition-all duration-700"
+            key={index}
+          >
             <div
               className={`${
                 index === openIndex ? "bg-orange text-white" : ""
-              } cursor-pointer transition-all`}
+              } cursor-pointer transition-all duration-500`}
               onClick={() => setOpenIndex(index === openIndex ? null : index)}
             >
               <div className={` flex p-3  align-middle cursor-pointer`}>
@@ -73,7 +76,7 @@ const FaqSection = () => {
             <div
               className={`${
                 index === openIndex ? "block" : "hidden"
-              } mt-[15px] px-5 text-sm`}
+              } mt-[15px] px-5 text-sm transition-all duration-700`}
             >
               {item.content}
             </div>
