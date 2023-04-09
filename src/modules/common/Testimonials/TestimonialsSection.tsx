@@ -18,11 +18,11 @@ export default class TestimonialsSection extends Component {
       slidesToScroll: 1,
       autoplay: true,
       speed: 600,
-      autoplaySpeed: 1800,
+      autoplaySpeed: 5000,
       cssEase: "linear",
     };
     return (
-      <div>
+      <div className=" mr-24">
         <SupTitle>HAPPY CUSTOMER</SupTitle>
         <Title>Testimonials</Title>
         <Slider {...settings} className="mt-12 max-w-md mb-[100px]">

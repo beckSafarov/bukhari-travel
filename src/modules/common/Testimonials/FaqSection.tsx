@@ -1,47 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import SupTitle from "../Typography/SupTitle";
 import Title from "../Typography/Title";
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import { Collapse } from "react-collapse";
 
 const FaqSection = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const data = [
+    {
+      id: 1,
+      question: "Why is this happening?",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Incidunt autem nulla est inventore nostrum accusantium saepe veritatis accusamus consequatur officia ipsum dolor sit amet consectetur adipisicing elit.Incidunt autem nulla est inventore nostr",
+    },
+    {
+      id: 2,
+      question: "Why is this happening?",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Incidunt autem nulla est inventore nostrum accusantium saepe veritatis accusamus consequatur officia ipsum dolor sit amet consectetur adipisicing elit.Incidunt autem nulla est inventore nostr",
+    },
+    {
+      id: 3,
+      question: "Why is this happening?",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Incidunt autem nulla est inventore nostrum accusantium saepe veritatis accusamus consequatur officia ipsum dolor sit amet consectetur adipisicing elit.Incidunt autem nulla est inventore nostr",
+    },
+    {
+      id: 4,
+      question: "Why is this happening?",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Incidunt autem nulla est inventore nostrum accusantium saepe veritatis accusamus consequatur officia ipsum dolor sit amet consectetur adipisicing elit.Incidunt autem nulla est inventore nostr",
+    },
+  ];
   return (
-    <div>
+    <div className="pb-20">
       <SupTitle>FAQ</SupTitle>
       <Title>
         Frequently Asked <br /> Questions
       </Title>
-      <div className="custom-accordion" id="accordion_1">
-        <div className="accordion-item">
-          <h2 className="mb-0">
-            <button>How to download and register?</button>
-          </h2>
-          <div>
-            <div className="accordion-body">Far</div>
+      <div className="p-20">
+        {data.map((item, index) => (
+          <div className=" pt-3 pb-5" key={index}>
+            <div
+              className={`${
+                index === openIndex ? "bg-orange text-white" : ""
+              } flex cursor-pointer transition-all`}
+              onClick={() => setOpenIndex(index === openIndex ? null : index)}
+            >
+              <span className=" text-2xl pr-2 ">
+                {index === openIndex ? <AiOutlineMinus /> : <AiOutlinePlus />}
+              </span>
+              <h2 className=" text-2xl">{item.question}</h2>
+            </div>
+
+            <div
+              className={`${
+                index === openIndex ? "block" : "hidden"
+              } mt-[15px]`}
+            >
+              {item.content}
+            </div>
           </div>
-        </div>
-        <div className="accordion-item">
-          <h2 className="mb-0">
-            <button>How to create your paypal account?</button>
-          </h2>
-          <div>
-            <div className="accordion-body">A .</div>
-          </div>
-        </div>
-        <div className="accordion-item">
-          <h2 className="mb-0">
-            <button>How to link your paypal and bank account?</button>
-          </h2>
-          <div>
-            <div className="accordion-body">When</div>
-          </div>
-        </div>
-        <div className="accordion-item">
-          <h2 className="mb-0">
-            <button>We are better than others?</button>
-          </h2>
-          <div>
-            <div className="accordion-body">When</div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
