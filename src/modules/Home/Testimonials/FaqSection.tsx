@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import SupTitle from "../Typography/SupTitle";
-import Title from "../Typography/Title";
+import SupTitle from "../../common/Typography/SupTitle";
+import Title from "../../common/Typography/Title";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
-
 
 const FaqSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -38,25 +37,31 @@ const FaqSection = () => {
       <Title>
         Frequently Asked <br /> Questions
       </Title>
-      <div className="p-20">
+      <div className="pb-10 mt-5">
         {data.map((item, index) => (
-          <div className=" pt-3 pb-5" key={index}>
+          <div className=" pt-3 pb-3 cursor-pointer" key={index}>
             <div
               className={`${
                 index === openIndex ? "bg-orange text-white" : ""
-              } flex cursor-pointer transition-all`}
+              } cursor-pointer transition-all`}
               onClick={() => setOpenIndex(index === openIndex ? null : index)}
             >
-              <span className=" text-2xl pr-2 ">
-                {index === openIndex ? <AiOutlineMinus /> : <AiOutlinePlus />}
-              </span>
-              <h2 className=" text-2xl">{item.question}</h2>
+              <div className="flex p-3 font-sans font-medium align-middle cursor-pointer">
+                <span className=" text-xl pr-2 pt-1">
+                  {index === openIndex ? (
+                    <AiOutlineMinus className=" font-serif " />
+                  ) : (
+                    <AiOutlinePlus className="" />
+                  )}
+                </span>
+                <h2 className=" text-xl ">{item.question}</h2>
+              </div>
             </div>
 
             <div
               className={`${
                 index === openIndex ? "block" : "hidden"
-              } mt-[15px]`}
+              } mt-[15px] px-5`}
             >
               {item.content}
             </div>

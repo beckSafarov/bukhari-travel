@@ -7,8 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 import Card from "./Card";
 
-import Title from "../Typography/Title";
-import SupTitle from "../Typography/SupTitle";
+import Title from "../../common/Typography/Title";
+import SupTitle from "../../common/Typography/SupTitle";
 
 export default class TestimonialsSection extends Component {
   render() {
@@ -22,7 +22,7 @@ export default class TestimonialsSection extends Component {
       cssEase: "linear",
     };
     return (
-      <div className=" mr-24">
+      <div className=" mr-40">
         <SupTitle>HAPPY CUSTOMER</SupTitle>
         <Title>Testimonials</Title>
         <Slider {...settings} className="mt-12 max-w-md mb-[100px]">
