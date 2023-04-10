@@ -72,6 +72,7 @@ const Footer = () => {
               <div className='flex space-x-1'>
                 {socialIcons.map((Social: SocialIconObj, i: number) => (
                   <Circle
+                    key={i}
                     size='35px'
                     className='bg-[#777] text-white cursor-pointer'
                   >
