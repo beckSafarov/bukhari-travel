@@ -3,12 +3,12 @@ module.exports = {
   content: ["./src/**/*.{html,ts,tsx}"],
   theme: {
     screens: {
-      'xsm': '360px',
-      'sm': '480px',
-      'md': '768px',
-      'lg': '1024px',
-      'xl': '1440px',
-      '2xl':'1920px',
+      'xsm': '320px',//small mobiles
+      'sm': '361px',//large mobiles
+      'md': '760px',//tablets
+      'lg': '1024px', //laptops
+      'xl': '1281px',//desktops
+      '2xl': '1536px' //large screens
     },
     colors: {
       'gray-light':'#fafafa',

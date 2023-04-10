@@ -1,4 +1,4 @@
-export interface SlideType {
+export type SlideType ={
   slickNext(): void
   slickPrev(): void
 }
