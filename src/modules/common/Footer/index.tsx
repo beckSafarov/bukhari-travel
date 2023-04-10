@@ -52,29 +52,29 @@ const FooterCol = ({children}:{children:React.ReactNode}) => {
 
 const Footer = () => {
   return (
-    <div className='bg-gray-footer w-full'>
-      <SectionsContainer className='py-10 bg-gray-footer my-0 mx-ato'>
-        <div className='flex justify-between'>
+    <div className="bg-gray-footer w-full">
+      <SectionsContainer className="py-10 bg-gray-footer my-0 mx-ato">
+        <div className="flex justify-between">
           {/* info block */}
           <FooterCol>
             <FooterCol>
               <SmallTitle>About Al-Bukhari travel</SmallTitle>
-              <div className='flex space-x-1 xl:max-w-[500px]'>
-                <Para className='text-gray'>
+              <div className="flex space-x-1 xl:max-w-[500px]">
+                <Para className="text-gray">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Vitae voluptate ratione beatae, neque inventore culpa.
                 </Para>
               </div>
             </FooterCol>
             {/* socials */}
-            <div className='flex flex-col space-y-4'>
+            <div className="flex flex-col space-y-4">
               <SmallTitle>Connect</SmallTitle>
-              <div className='flex space-x-1'>
+              <div className="flex space-x-1">
                 {socialIcons.map((Social: SocialIconObj, i: number) => (
                   <Circle
                     key={i}
-                    size='35px'
-                    className='bg-[#777] text-white cursor-pointer'
+                    size="35px"
+                    className="bg-[#777] text-white cursor-pointer"
                   >
                     {<Social.Icon />}
                   </Circle>
@@ -84,9 +84,9 @@ const Footer = () => {
           </FooterCol>
           <FooterCol>
             <SmallTitle>Links</SmallTitle>
-            <div className='flex flex-col space-y-2'>
+            <div className="flex flex-col space-y-2">
               {Links.map((link: LinkType, i: number) => (
-                <Link className='font-sans text-gray' key={i} href={link.path}>
+                <Link className="font-sans text-gray" key={i} href={link.path}>
                   {link.label}
                 </Link>
               ))}
@@ -94,9 +94,9 @@ const Footer = () => {
           </FooterCol>
           <FooterCol>
             <SmallTitle>Company</SmallTitle>
-            <div className='flex flex-col space-y-2'>
+            <div className="flex flex-col space-y-2">
               {Company.map((link: LinkType, i: number) => (
-                <Link className='font-sans text-gray' key={i} href={link.path}>
+                <Link className="font-sans text-gray" key={i} href={link.path}>
                   {link.label}
                 </Link>
               ))}
@@ -104,20 +104,20 @@ const Footer = () => {
           </FooterCol>
           <FooterCol>
             <SmallTitle>Contact</SmallTitle>
-            <div className='flex flex-col space-y-2'>
-              <Para className='text-gray'>{contact.address}</Para>
+            <div className="flex flex-col space-y-2">
+              <Para className="text-gray">{contact.address}</Para>
               {contact.phones.map((phone: string, i: number) => (
-                <Para className='text-gray' key={i}>
+                <Para className="text-gray" key={i}>
                   {phone}
                 </Para>
               ))}
-              <Para className='text-gray'>{contact.email}</Para>
+              <Para className="text-gray">{contact.email}</Para>
             </div>
           </FooterCol>
         </div>
       </SectionsContainer>
     </div>
-  )
+  );
 }
 
 export default Footer

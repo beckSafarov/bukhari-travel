@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Suptitle from "../Typography/SubTitle";
+import Suptitle from "../../common/Typography/SupTitle";
 
 type Props = {
   name: string;
@@ -13,18 +13,16 @@ const Card = ({ name, job, comment, image }: Props) => {
     <div className="mb-[60px]">
       <blockquote>
         <Image
-          src={`/images/${image}.jpg`}
+          src={`/images/${image}.webp`}
           className="mb-5 rounded-[200px] "
-          alt="image"
-          width={200}
-          height={220}
+          alt={name}
+          width={110}
+          height={110}
         />
         <Suptitle>{name}</Suptitle>
-        <p className=" text-sm mb-5">{job}</p>
-        <p></p>
-        <span className=" text-7xl">“</span>
-        <p className=" max-w-md">{comment}</p>
-        <p></p>
+        <p className="text-sm mb-5">{job}</p>
+        <p className="text-7xl mb-[-36px]">“</p>
+        <p className="max-w-md">{comment}</p>
       </blockquote>
     </div>
   );
