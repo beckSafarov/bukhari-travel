@@ -22,7 +22,7 @@ const FaqSection = () => {
       <div className="pb-10 mt-5">
         {data.map((item, index) => (
           <div
-            className="pt-3 pb-3 cursor-pointer transition-all duration-700"
+            className="lg:pt-3 lg:pb-3 md:pt-2 md:p-b-2 pt-1 pb-1 cursor-pointer transition-all duration-700"
             key={index}
           >
             <div
@@ -31,7 +31,7 @@ const FaqSection = () => {
               } cursor-pointer transition-all duration-300`}
               onClick={() => setOpenIndex(index === openIndex ? null : index)}
             >
-              <div className={` flex p-3  align-middle cursor-pointer`}>
+              <div className={` flex p-3   align-middle cursor-pointer`}>
                 <span className={`text-base pr-2 pt-1 `}>
                   {index === openIndex ? <FaMinus /> : <FaPlus />}
                 </span>

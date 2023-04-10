@@ -16,8 +16,8 @@ const Card = ({ name, job, comment, image }: Props) => {
           src={`/images/${image}.webp`}
           className="mb-5 rounded-[200px] "
           alt={name}
-          width={110}
-          height={110}
+          width={90}
+          height={90}
         />
         <Suptitle>{name}</Suptitle>
         <p className="text-sm mb-5">{job}</p>

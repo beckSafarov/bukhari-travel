@@ -7,33 +7,33 @@ import Card from "./Card";
 import Title from "../../common/Typography/Title";
 import SupTitle from "../../common/Typography/SupTitle";
 
-export default class TestimonialsSection extends Component {
-  render() {
-    const settings = {
-      dots: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      speed: 600,
-      autoplaySpeed: 5000,
-      cssEase: "linear",
-    };
-    return (
-      <div className="flex-1">
-        <SupTitle>HAPPY CUSTOMER</SupTitle>
-        <Title>Testimonials</Title>
-        <Slider {...settings} className="mt-12 max-w-lg mb-[100px]">
-          {dataSlider.map((obj, i) => (
-            <Card
-              key={i}
-              name={obj.name}
-              job={obj.job}
-              comment={obj.comment}
-              image={obj.image}
-            />
-          ))}
-        </Slider>
-      </div>
-    );
-  }
-}
+const TestimonialsSection = () => {
+  const settings = {
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    arrows: false,
+    speed: 600,
+    autoplaySpeed: 5000,
+    cssEase: "linear",
+  };
+  return (
+    <div className="flex-1">
+      <SupTitle>HAPPY CUSTOMER</SupTitle>
+      <Title>Testimonials</Title>
+      <Slider {...settings} className="mt-12 max-w-lg mb-[100px]">
+        {dataSlider.map((obj, i) => (
+          <Card
+            key={i}
+            name={obj.name}
+            job={obj.job}
+            comment={obj.comment}
+            image={obj.image}
+          />
+        ))}
+      </Slider>
+    </div>
+  );
+};
+export default TestimonialsSection;
