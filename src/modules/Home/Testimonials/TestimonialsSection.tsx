@@ -22,7 +22,7 @@ export default class TestimonialsSection extends Component {
       cssEase: "linear",
     };
     return (
-      <div className=" mr-40">
+      <div className="mr-36">
         <SupTitle>HAPPY CUSTOMER</SupTitle>
         <Title>Testimonials</Title>
         <Slider {...settings} className="mt-12 max-w-md mb-[100px]">
