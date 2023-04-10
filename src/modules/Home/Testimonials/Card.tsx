@@ -15,16 +15,14 @@ const Card = ({ name, job, comment, image }: Props) => {
         <Image
           src={`/images/${image}.webp`}
           className="mb-5 rounded-[200px] "
-          alt="image"
+          alt={name}
           width={110}
           height={110}
         />
         <Suptitle>{name}</Suptitle>
-        <p className=" text-sm mb-5">{job}</p>
-        <p></p>
-        <p className=" text-7xl mb-[-36px]">“</p>
-        <p className=" max-w-md">{comment}</p>
-        <p></p>
+        <p className="text-sm mb-5">{job}</p>
+        <p className="text-7xl mb-[-36px]">“</p>
+        <p className="max-w-md">{comment}</p>
       </blockquote>
     </div>
   );

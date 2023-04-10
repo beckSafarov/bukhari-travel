@@ -19,7 +19,7 @@ const BlogCard = ({blogCard}:{blogCard:BlogCardType}) => {
       <div className='flex flex-col space-y-2 pt-5'>
         <div className='flex flex-col space-y-1'>
           <span className='font-sans text-xs'>{blogCard.date}</span>
-          <h3 className='font-serif font-bold'>{blogCard.title}</h3>
+          <h3 className='font-serif font-bold hover:text-orange cursor-pointer transition duration-250'>{blogCard.title}</h3>
         </div>
         <Para>{blogCard.description}</Para>
         <Link
