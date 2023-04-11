@@ -58,16 +58,22 @@ const ServicesSection = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    // appendDots: (idx:[])=>{
-    //   console.log(idx)
-    //   return (
-    //     <div className='relative flex space-x-2 bg-gray'>
-    //       {cards.map((_: CardType, i: number) => (
-    //         <Circle key={i} size='20px' className='bg-orange cursor-pointer'/>
-    //       ))}
-    //     </div>
-    //   )
-    // }
+    responsive: [
+      {
+        breakpoint: 340,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   }
 
   const handlePrev = (): void => {
@@ -91,13 +97,13 @@ const ServicesSection = () => {
     {icon: HiArrowRight, onClick: handleNext},
   ]
   return (
-    <SectionsContainer className="py-10">
-      <div className="relative flex flex-col">
-        <div className="flex">
-          <div className="flex-[0.8] flex flex-col">
+    <SectionsContainer className='py-10 xsm:py-5'>
+      <div className='relative flex flex-col'>
+        <div className='flex md:flex-row xsm:flex-col'>
+          <div className='flex-[0.8] flex flex-col'>
             <SupTitle>WHAT WE SERVE</SupTitle>
             <Title>We Provide Top Destinations</Title>
-            <div className="mt-7">
+            <div className='mt-7'>
               <Para>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore
                 ea obcaecati recusandae aliquam architecto. Vitae expedita odit
@@ -105,24 +111,28 @@ const ServicesSection = () => {
               </Para>
             </div>
           </div>
-          <div className="flex-[1.2] flex justify-end items-end">
-            <div className="flex items-center space-x-4">
+          <div className='flex-[1.2] flex md:justify-end md:pt-0 items-end xsm:justify-center xsm:pt-3'>
+            <div className='flex items-center space-x-4'>
               {icons.map((Icon: IconObjType, i: number) => (
                 <span
                   key={i}
                   onClick={Icon.onClick}
                   className={`text-gray-arrow cursor-pointer hover:text-orange  ${
-                    i === 1 ? "hover:translate-x-1" : "hover:-translate-x-1"
+                    i === 1 ? 'hover:translate-x-1' : 'hover:-translate-x-1'
                   } transition duration-200`}
                 >
-                  <Icon.icon size="50" />
+                  <Icon.icon size='50' />
                 </span>
               ))}
             </div>
           </div>
         </div>
-        <div className="w-full overflow-hidden pt-10 pb-5 h-fit">
-          <Slider ref={handleSliderRef} {...settings}>
+        <div className='w-full overflow-hidden pt-10 pb-5 h-fit'>
+          <Slider
+            ref={handleSliderRef}
+            {...settings}
+            className='md:pb-0 xsm:pb-3'
+          >
             {cards.map((card: CardType, i: number) => (
               <DestinationCard key={i} {...card} />
             ))}
@@ -130,7 +140,7 @@ const ServicesSection = () => {
         </div>
       </div>
     </SectionsContainer>
-  );
+  )
 }
 
 export default ServicesSection
