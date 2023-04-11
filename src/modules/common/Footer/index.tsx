@@ -54,20 +54,20 @@ const Footer = () => {
   return (
     <div className="bg-gray-footer w-full">
       <SectionsContainer className="py-10 bg-gray-footer my-0 mx-ato">
-        <div className="flex justify-between">
+        <div className="lg:flex  justify-between">
           {/* info block */}
           <FooterCol>
             <FooterCol>
               <SmallTitle>About Al-Bukhari travel</SmallTitle>
               <div className="flex space-x-1 xl:max-w-[500px]">
-                <Para className="text-gray">
+                <Para className="text-gray max-w-[300px] xl:max-w-sm">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Vitae voluptate ratione beatae, neque inventore culpa.
                 </Para>
               </div>
             </FooterCol>
             {/* socials */}
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-4 lg:pb-0 pb-8">
               <SmallTitle>Connect</SmallTitle>
               <div className="flex space-x-1">
                 {socialIcons.map((Social: SocialIconObj, i: number) => (
@@ -84,7 +84,7 @@ const Footer = () => {
           </FooterCol>
           <FooterCol>
             <SmallTitle>Links</SmallTitle>
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-2 lg:pb-0 pb-8">
               {Links.map((link: LinkType, i: number) => (
                 <Link className="font-sans text-gray" key={i} href={link.path}>
                   {link.label}
@@ -94,7 +94,7 @@ const Footer = () => {
           </FooterCol>
           <FooterCol>
             <SmallTitle>Company</SmallTitle>
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-2 lg:pb-0 pb-8">
               {Company.map((link: LinkType, i: number) => (
                 <Link className="font-sans text-gray" key={i} href={link.path}>
                   {link.label}
