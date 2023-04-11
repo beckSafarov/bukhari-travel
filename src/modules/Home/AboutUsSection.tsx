@@ -10,9 +10,9 @@ const images = ['about_1', 'about_2']
 const AboutUsSection = () => {
   
   return (
-    <SectionsContainer className='xl:py-28 lg:py-28 xsm:py-20'>
+    <SectionsContainer className='xl:py-28 lg:py-20 xsm:py-20'>
       {/* flexbox */}
-      <div className='relative flex xsm:flex-col lg:flex-row  items-start h-fit'>
+      <div className='relative flex xsm:flex-col lg:flex-row xl:items-start lg:items-center  h-fit'>
         <div className='flex-[0.9] flex flex-col justify-between'>
           <SupTitle>ABOUT US</SupTitle>
           <Title className='xsm:text-3xl'>
@@ -37,12 +37,12 @@ const AboutUsSection = () => {
             <FullButton>Read More</FullButton>
           </div>
         </div>
-        <div className='relative flex-[1.1] xl:pl-10 lg:pl-10 md:pl-0 sm:pl-0 flex justify-center lg:space-x-5 xsm:space-x-2 h-full pb-12'>
+        <div className='relative flex-[1.1] xl:pl-10 lg:pl-10 md:pl-0 sm:pl-0 flex justify-center lg:space-x-5 lg:items-center xsm:space-x-2 h-full pb-12'>
           {images.map((image: string, i: number) => (
             <div
               key={i}
-              className={`${
-                i === 1 ? 'pt-5' : 'pt-0'
+              className={` ${
+                i === 1 ? 'lg:pt-8' : 'pt-0'
               } md:pt-0 sm:pt-0 xsm:pt-0`}
             >
               <img

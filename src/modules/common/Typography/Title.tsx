@@ -5,7 +5,7 @@ const Title = ({children, ...rest}:TitleTypes) => {
   const className = rest?.className
   return (
     <h1
-      className={`font-serif xl:text-5xl lg:text-5xl md:text-4xl text-3xl md:leading-tight font-bold ${className}`}
+      className={`font-serif xl:text-5xl lg:text-4xl md:text-4xl text-3xl lg:leading-tight md:leading-tight font-bold ${className}`}
       style={rest}
     >
       {children}
