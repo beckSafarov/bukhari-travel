@@ -91,13 +91,13 @@ const ServicesSection = () => {
     {icon: HiArrowRight, onClick: handleNext},
   ]
   return (
-    <SectionsContainer className='py-10'>
-      <div className='relative flex flex-col'>
-        <div className='flex'>
-          <div className='flex-[0.8] flex flex-col'>
+    <SectionsContainer className="py-10">
+      <div className="relative flex flex-col">
+        <div className="flex">
+          <div className="flex-[0.8] flex flex-col">
             <SupTitle>WHAT WE SERVE</SupTitle>
-            <Title fontSize='46px'>We Provide Top Destinations</Title>
-            <div className='mt-7'>
+            <Title>We Provide Top Destinations</Title>
+            <div className="mt-7">
               <Para>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore
                 ea obcaecati recusandae aliquam architecto. Vitae expedita odit
@@ -105,23 +105,23 @@ const ServicesSection = () => {
               </Para>
             </div>
           </div>
-          <div className='flex-[1.2] flex justify-end items-end'>
-            <div className='flex items-center space-x-4'>
+          <div className="flex-[1.2] flex justify-end items-end">
+            <div className="flex items-center space-x-4">
               {icons.map((Icon: IconObjType, i: number) => (
                 <span
                   key={i}
                   onClick={Icon.onClick}
                   className={`text-gray-arrow cursor-pointer hover:text-orange  ${
-                    i === 1 ? 'hover:translate-x-1' : 'hover:-translate-x-1'
+                    i === 1 ? "hover:translate-x-1" : "hover:-translate-x-1"
                   } transition duration-200`}
                 >
-                  <Icon.icon size='50' />
+                  <Icon.icon size="50" />
                 </span>
               ))}
             </div>
           </div>
         </div>
-        <div className='w-full overflow-hidden pt-10 pb-5 h-fit'>
+        <div className="w-full overflow-hidden pt-10 pb-5 h-fit">
           <Slider ref={handleSliderRef} {...settings}>
             {cards.map((card: CardType, i: number) => (
               <DestinationCard key={i} {...card} />
@@ -130,7 +130,7 @@ const ServicesSection = () => {
         </div>
       </div>
     </SectionsContainer>
-  )
+  );
 }
 
 export default ServicesSection
