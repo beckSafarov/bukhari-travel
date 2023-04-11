@@ -13,7 +13,7 @@ const Hero = () => {
         <div
           className={`flex flex-col translate-y-[30%] h-full space-y-4 xl:max-w-[35%] md:max-w-[50%]xsm:max-w-[100%] ${mobileSideSpacing}`}
         >
-          <Title color='white'>It is Better to Travel Well Than to Arrive</Title>
+          <Title color='white' fontSize='60px'>It is Better to Travel Well Than to Arrive</Title>
           <p className='font-sans text-white text-lg font-light tracking-wider'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, nobis.
           </p>

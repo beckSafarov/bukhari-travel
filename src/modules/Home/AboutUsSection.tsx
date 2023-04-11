@@ -19,7 +19,7 @@ const AboutUsSection = () => {
             Explore All Corners of The World With Us
           </Title>
           {/* paras */}
-          <div className='mt-5 font-sans space-y-4'>
+          <div className="mt-5 font-sans space-y-4">
             <Para>
               Far far away, behind the word mountains, far from the countries
               Vokalia and Consonantia, there live the blind texts. Separated
