@@ -30,7 +30,7 @@ module.exports = {
     },
     fontFamily: {
       serif: ['"Playfair Display"', 'serif'],
-      sans: ['Open Sans', 'sans-serif'],
+      sans: ["Open Sans", 'sans-serif'],
     },
     extend: {
       keyframes: {
