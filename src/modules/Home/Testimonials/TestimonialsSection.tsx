@@ -22,7 +22,7 @@ const TestimonialsSection = () => {
     <div className="flex-1">
       <SupTitle>HAPPY CUSTOMER</SupTitle>
       <Title>Testimonials</Title>
-      <Slider {...settings} className="mt-12 max-w-lg mb-[100px]">
+      <Slider {...settings} className="mt-12 lg:max-w-lg mb-[100px]">
         {dataSlider.map((obj, i) => (
           <Card
             key={i}

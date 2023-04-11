@@ -22,7 +22,7 @@ const Card = ({ name, job, comment, image }: Props) => {
         <Suptitle>{name}</Suptitle>
         <p className="text-sm mb-5">{job}</p>
         <p className="text-7xl mb-[-36px]">“</p>
-        <p className="max-w-md">{comment}</p>
+        <p className="lg:max-w-md">{comment}</p>
       </blockquote>
     </div>
   );

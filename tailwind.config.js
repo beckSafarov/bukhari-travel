@@ -42,9 +42,6 @@ module.exports = {
       animation: {
         slideFromRight: "slideFromRight 0.5s ease-in-out",
       },
-      backgroundImage: {
-        "hero-pattern": "url('/images/hero_1.png')",
-      },
     },
   },
   plugins: [],
