@@ -1,13 +1,13 @@
-import Layout from '@/modules/common/Layout'
-import React, { useState } from 'react'
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
-import Circle from '@/modules/common/Circle'
-import StaticHero from '@/modules/common/Hero/StaticHero'
+import Layout from "@/modules/common/Layout";
+import React, { useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Circle from "@/modules/common/Circle";
+import StaticHero from "@/modules/common/Hero/StaticHero";
 interface SlideType {
-  slickNext(): void
-  slickPrev(): void
+  slickNext(): void;
+  slickPrev(): void;
 }
 const TestPage = () => {
   const slidesToShow = 3;
@@ -47,15 +47,11 @@ const TestPage = () => {
     },
   };
   return (
-<<<<<<< HEAD
     <Layout title="test page">
-=======
-    <Layout title='test page'>
       <StaticHero
-        title='Test Page'
-        subtitle='Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'
+        title="Test Page"
+        subtitle="Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts."
       />
->>>>>>> 5d7548975e25b83268f3482b923446a02c6e4329
       <h1>Welcome to Test Page</h1>
       <div className="flex w-full items-center justify-end space-x-2 text-lg p-5">
         <span onClick={handlePrev} className="cursor-pointer">
@@ -65,13 +61,8 @@ const TestPage = () => {
           Next ➡️
         </span>
       </div>
-<<<<<<< HEAD
       <div className="px-10 bg-blue w-full overflow-x-hidden">
         <Slider ref={handleSliderRef} {...settings} className="px-20 py-10">
-=======
-      <div className='px-10 bg-blue w-full overflow-x-hidden'>
-        <Slider ref={handleSliderRef} {...settings} className='px-20 py-10'>
->>>>>>> 5d7548975e25b83268f3482b923446a02c6e4329
           {cards.map((text: number, i: number) => (
             <div key={i}>
               <h1>{text}</h1>
