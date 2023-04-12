@@ -1,7 +1,6 @@
 import { mobileSideSpacing } from '@/modules/utils'
 import React from 'react'
 import Title from '../Typography/Title'
-import Navbar from './Navbar'
 import useResponsiveDesign from '@/hooks/useResponsiveDesign'
 const maxWidth = process.env.NEXT_PUBLIC_TW_MAX_WIDTH
 
@@ -11,7 +10,6 @@ const Hero = () => {
     <div className='h-screen w-screen bg-hero-pattern bg-cover bg-center before:content-[""] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black-blurred'>
       {/* container */}
       <div className={`${maxWidth} mx-auto h-full`}>
-        <Navbar/>
         <div
           className={`flex flex-col translate-y-[30%] h-full space-y-4 xl:max-w-[35%] md:max-w-[50%] xsm:max-w-[100%] ${mobileSideSpacing}`}
         >
