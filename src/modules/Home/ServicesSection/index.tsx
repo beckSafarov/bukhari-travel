@@ -105,7 +105,7 @@ const ServicesSection = () => {
               </Para>
             </div>
           </div>
-          <div className='flex-[1.2] flex md:justify-end md:pt-0 items-end xsm:justify-center xsm:pt-3'>
+          <div className='flex-[1.2] flex md:justify-end md:pt-0 items-end xsm:justify-start xsm:pt-3'>
             <div className='flex items-center space-x-4'>
               {icons.map((icon: IconObjType, i: number) => (
                 <ArrowIcon key={i} {...icon} />
