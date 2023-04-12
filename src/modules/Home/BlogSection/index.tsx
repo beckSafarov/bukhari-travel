@@ -13,6 +13,7 @@ const blogCards = [
       'Vokalia and Consonantia, there live the blind texts. Separated they live.',
     date: 'March 14, 2023',
     image: '/images/1.png',
+    path: '/',
   },
   {
     title: 'Far far away, behind the word mountains',
@@ -20,6 +21,7 @@ const blogCards = [
       'Vokalia and Consonantia, there live the blind texts. Separated they live.',
     date: 'March 14, 2023',
     image: '/images/2.png',
+    path: '/',
   },
   {
     title: 'Far far away, behind the word mountains',
@@ -27,6 +29,7 @@ const blogCards = [
       'Vokalia and Consonantia, there live the blind texts. Separated they live.',
     date: 'March 14, 2023',
     image: '/images/3.png',
+    path: '/',
   },
   {
     title: 'Far far away, behind the word mountains',
@@ -34,6 +37,7 @@ const blogCards = [
       'Vokalia and Consonantia, there live the blind texts. Separated they live.',
     date: 'March 14, 2023',
     image: '/images/4.png',
+    path: '/',
   },
 ]
 

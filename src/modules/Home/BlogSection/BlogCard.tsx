@@ -3,28 +3,40 @@ import { BlogCardType } from '../types'
 import Para from '@/modules/common/Typography/Para'
 import Link from 'next/link'
 import Image from 'next/image'
+import useResponsiveDesign from '@/hooks/useResponsiveDesign'
 
-const BlogCard = ({blogCard}:{blogCard:BlogCardType}) => {
+const BlogCard = ({blogCard: card}:{blogCard:BlogCardType}) => {
+  const {isMobile, isLaptop} = useResponsiveDesign()
+  const size = isMobile ? 150 : isLaptop ? 250 : 300
   return (
-    <div className='flex flex-col' style={{ maxWidth: '300px' }}>
+    <div
+      className='flex flex-col md:pb-7 xsm:pb-7'
+      style={{ maxWidth: `${size}px` }}
+    >
       <div>
-        <Image
-          src={blogCard.image}
-          height='300'
-          width='300'
-          alt={blogCard.title}
-        />
+        <Link href={card.path}>
+          <Image
+            src={card.image}
+            height={size}
+            width={size}
+            alt={card.title}
+          />
+        </Link>
       </div>
       {/* textContent */}
       <div className='flex flex-col space-y-2 pt-5'>
         <div className='flex flex-col space-y-1'>
-          <span className='font-sans text-xs'>{blogCard.date}</span>
-          <h3 className='font-serif font-bold hover:text-orange cursor-pointer transition duration-250'>{blogCard.title}</h3>
+          <span className='font-sans text-xs'>{card.date}</span>
+          <Link href={card.path}>
+            <h3 className='font-serif font-bold hover:text-orange cursor-pointer transition duration-250'>
+              {card.title}
+            </h3>
+          </Link>
         </div>
-        <Para>{blogCard.description}</Para>
+        <Para>{card.description}</Para>
         <Link
           className='text-orange text-sm hover:brightness-50 transition duration-500'
-          href='/'
+          href={card.path}
         >
           Read More
         </Link>
