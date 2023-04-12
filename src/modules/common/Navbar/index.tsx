@@ -1,13 +1,16 @@
 import React from 'react'
 import Link from 'next/link'
 import { useState } from 'react'
-import { BsSearch } from 'react-icons/bs'
-import {GiHamburgerMenu} from 'react-icons/gi'
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+import { mobileSideSpacing } from '@/modules/utils'
+const maxWidth = process.env.NEXT_PUBLIC_TW_MAX_WIDTH
+
 const NavLinks = [
-  { label: 'Sights', path: '/' },
-  { label: 'Food', path: '/' },
-  { label: 'Hotels', path: '/' },
-  { label: 'Traveling Tips', path: '/' },
+  { label: 'Home', path: '/' },
+  { label: 'About Us', path: '/' },
+  { label: 'Tours', path: '/' },
+  { label: 'Blog', path: '/' },
+  { label: 'Contact', path: '/' },
 ]
 
 interface NavLink {
@@ -15,66 +18,73 @@ interface NavLink {
   path: string
 }
 
-const Navbar = () => {
-  const [searchHovered, setSearchHovered] = useState(false)
+const Navbar = ({}) => {
   const [mobileMenuClicked, setMobileMenuClicked] = useState(false)
-
   return (
-    <div className='relative w-full h-20 lg:px-20 py-30 flex items-center justify-between border-b border-gray-dark md:px-10 sm:px-10'>
-      <div>
-        <h1 className='text-2xl text-black font-serif font-bold'>Al Bukhari</h1>
-      </div>
-      {/* menu */}
-      <div className='flex space-x-4 sm:hidden md:hidden lg:block'>
-        {NavLinks.map((link: NavLink, i: number) => (
-          <Link
-            href={link.path}
-            key={i}
-            className='font-sans text-black-light cursor-pointer hover:underline hover:text-black'
-          >
-            {link.label}
-          </Link>
-        ))}
-      </div>
-      <div className='flex space-x-6 w-fit'>
-        {/* search button */}
-        <div className='flex justify-end items-center space-x-3'>
-          <span style={{ visibility: searchHovered ? 'visible' : 'hidden' }}>
-            Search{' '}
-          </span>
-          <BsSearch
-            onMouseEnter={() => setSearchHovered(true)}
-            onMouseLeave={() => setSearchHovered(false)}
-            size='23'
-            cursor={'pointer'}
-          />
-        </div>
-        {/* mobile accordion toggle button */}
+    <>
+      <div className={'absolute top-5 w-full h-20 py-30 z-10'}>
         <div
-          className='bg-black w-10 h-10  flex justify-center items-center cursor-pointer lg:hidden'
-          onClick={() => setMobileMenuClicked(!mobileMenuClicked)}
+          className={`${maxWidth} my-0 mx-auto flex items-center justify-between  ${mobileSideSpacing}`}
         >
-          <GiHamburgerMenu color='white' size='20' />
+          <div className='flex items-center justify-center space-x-10'>
+            <h1 className='text-2xl text-white font-serif font-bold'>
+              Al Bukhari
+            </h1>
+            {/* menu */}
+            <div className='flex justify-center text-white-dimmed space-x-7 text-sm md:hidden sm:hidden xsm:hidden  lg:block'>
+              {NavLinks.map((link: NavLink, i: number) => (
+                <Link
+                  href={link.path}
+                  key={i}
+                  className='font-sans cursor-pointer hover:text-white'
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className='lg:block md:hidden sm:hidden xsm:hidden'>
+            <button className='text-white border-2 border-gray rounded-full py-1.5 px-5 text-sm hover:bg-orange hover:border-orange transition duration-450'>
+              Contact Us
+            </button>
+          </div>
+          <div className='flex space-x-6 w-fit lg:hidden'>
+            {/* mobile accordion toggle button */}
+            <div
+              onClick={() => setMobileMenuClicked(!mobileMenuClicked)}
+              className='cursor-pointer'
+            >
+              <AiOutlineMenu color='white' size='35' />
+            </div>
+          </div>
         </div>
       </div>
-      {/* mobile dropdown menu */}
-      {mobileMenuClicked && (
-        <div className='absolute top-20 left-0 bg-white w-full flex justify-start px-10 py-4'>
-          {/* links container */}
-          <div className='flex flex-col font-sans space-y-5 text-gray-med font-light text-base'>
+      {/* mobile navbar */}
+      <div
+        className={`fixed top-0 h-full left-full w-screen bg-transparent flex justify-end slideFromRight z-10`}
+        style={{ left: mobileMenuClicked ? '0' : '100%' }}
+      >
+        <div className='relative md:w-2/5 xsm:w-1/2 bg-white h-full py-14 md:px-8 xsm:px-4'>
+          <div
+            onClick={() => setMobileMenuClicked(false)}
+            className='absolute right-5 md:top-2 xsm:top-4 cursor-pointer'
+          >
+            <AiOutlineClose color='black' size='35' />
+          </div>
+          <div className='flex flex-col space-y-3'>
             {NavLinks.map((link: NavLink, i: number) => (
               <Link
                 href={link.path}
                 key={i}
-                className='cursor-pointer hover:underline hover:text-black'
+                className='font-sans md:text-sm xsm:text-base cursor-pointer hover:text-orange'
               >
                 {link.label}
               </Link>
             ))}
           </div>
         </div>
-      )}
-    </div>
+      </div>
+    </>
   )
 }
 

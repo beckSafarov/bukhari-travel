@@ -14,24 +14,15 @@ const BlogCard = ({blogCard: card}:{blogCard:BlogCardType}) => {
       style={{ maxWidth: `${size}px` }}
     >
       <div>
-        <Link href={card.path}>
-          <Image
-            src={card.image}
-            height={size}
-            width={size}
-            alt={card.title}
-          />
-        </Link>
+        <Image src={card.image} height={size} width={size} alt={card.title} />
       </div>
       {/* textContent */}
       <div className='flex flex-col space-y-2 pt-5'>
         <div className='flex flex-col space-y-1'>
           <span className='font-sans text-xs'>{card.date}</span>
-          <Link href={card.path}>
-            <h3 className='font-serif font-bold hover:text-orange cursor-pointer transition duration-250'>
-              {card.title}
-            </h3>
-          </Link>
+          <h3 className='font-serif font-bold hover:text-orange cursor-pointer transition duration-250'>
+            <Link href={card.path}>{card.title}</Link>
+          </h3>
         </div>
         <Para>{card.description}</Para>
         <Link
