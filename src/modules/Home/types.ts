@@ -7,5 +7,6 @@ export type BlogCardType = {
   title: string
   description: string
   date: string
-  image: string
+  image: string,
+  path: string
 }

@@ -2,17 +2,16 @@ import React, { useState } from 'react'
 import SupTitle from '@/modules/common/Typography/SupTitle'
 import Title from '@/modules/common/Typography/Title'
 import Para from '@/modules/common/Typography/Para'
-import { HiArrowLeft, HiArrowRight } from 'react-icons/hi2'
-import { IconType } from 'react-icons'
 import Slider from 'react-slick'
 import SectionsContainer from '../components/SectionsContainer'
 import DestinationCard from './DestinationCard'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { SlideType } from '../types'
+import ArrowIcon from './ArrowIcon'
 type IconObjType = {
-  icon: IconType,
-  onClick: (c:any)=>void
+  dir: string,
+  onClick: (c: any) => void
 }
 type CardType = {
   title: string,
@@ -48,8 +47,6 @@ const cards = [
   },
 ] 
 
-
-
 const ServicesSection = () => {
   const [slick, setSlick] = useState<SlideType>()
   const settings = {
@@ -58,16 +55,22 @@ const ServicesSection = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    // appendDots: (idx:[])=>{
-    //   console.log(idx)
-    //   return (
-    //     <div className='relative flex space-x-2 bg-gray'>
-    //       {cards.map((_: CardType, i: number) => (
-    //         <Circle key={i} size='20px' className='bg-orange cursor-pointer'/>
-    //       ))}
-    //     </div>
-    //   )
-    // }
+    responsive: [
+      {
+        breakpoint: 340,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   }
 
   const handlePrev = (): void => {
@@ -81,23 +84,20 @@ const ServicesSection = () => {
 
   const handleSliderRef = (c: any): void => {
     if (!c || slick?.slickNext) return
-    setSlick({
-      slickNext: c.slickNext,
-      slickPrev: c.slickPrev,
-    })
+    setSlick({...c})
   }
   const icons = [
-    {icon: HiArrowLeft, onClick: handlePrev},
-    {icon: HiArrowRight, onClick: handleNext},
+    {dir: 'left', onClick: handlePrev},
+    {dir: 'right', onClick: handleNext},
   ]
   return (
-    <SectionsContainer className="py-10">
-      <div className="relative flex flex-col">
-        <div className="flex">
-          <div className="flex-[0.8] flex flex-col">
+    <SectionsContainer className='py-10 xsm:py-5'>
+      <div className='relative flex flex-col'>
+        <div className='flex md:flex-row xsm:flex-col'>
+          <div className='flex-[0.8] flex flex-col'>
             <SupTitle>WHAT WE SERVE</SupTitle>
             <Title>We Provide Top Destinations</Title>
-            <div className="mt-7">
+            <div className='mt-7'>
               <Para>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore
                 ea obcaecati recusandae aliquam architecto. Vitae expedita odit
@@ -105,24 +105,20 @@ const ServicesSection = () => {
               </Para>
             </div>
           </div>
-          <div className="flex-[1.2] flex justify-end items-end">
-            <div className="flex items-center space-x-4">
-              {icons.map((Icon: IconObjType, i: number) => (
-                <span
-                  key={i}
-                  onClick={Icon.onClick}
-                  className={`text-gray-arrow cursor-pointer hover:text-orange  ${
-                    i === 1 ? "hover:translate-x-1" : "hover:-translate-x-1"
-                  } transition duration-200`}
-                >
-                  <Icon.icon size="50" />
-                </span>
+          <div className='flex-[1.2] flex md:justify-end md:pt-0 items-end xsm:justify-start xsm:pt-3'>
+            <div className='flex items-center space-x-4'>
+              {icons.map((icon: IconObjType, i: number) => (
+                <ArrowIcon key={i} {...icon} />
               ))}
             </div>
           </div>
         </div>
-        <div className="w-full overflow-hidden pt-10 pb-5 h-fit">
-          <Slider ref={handleSliderRef} {...settings}>
+        <div className='w-full overflow-hidden pt-10 pb-5 h-fit'>
+          <Slider
+            ref={handleSliderRef}
+            {...settings}
+            className='md:pb-0 xsm:pb-3'
+          >
             {cards.map((card: CardType, i: number) => (
               <DestinationCard key={i} {...card} />
             ))}
@@ -130,7 +126,7 @@ const ServicesSection = () => {
         </div>
       </div>
     </SectionsContainer>
-  );
+  )
 }
 
 export default ServicesSection

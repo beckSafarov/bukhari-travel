@@ -1,14 +1,17 @@
-import React from 'react'
 import { useWindowSize } from './useWindowSize'
 
 const useResponsiveDesign = () => {
-  const {width, height} = useWindowSize() || {width: undefined, height: undefined}
+  const { width } = useWindowSize() || {
+    width: undefined,
+    height: undefined,
+  };
   if(typeof width === 'number'){
     const isMobile = width <= 460
-    const isTablet = width >= 768 && width <= 1024
-    const isDesktop = width >= 1200
-    const isBigScreen = width >= 1900
-    return { width, isMobile, isTablet, isDesktop, isBigScreen }
+    const isTablet = width >= 768 && width < 1024
+    const isLaptop = width >= 1024 && width <= 1280
+    const isDesktop = width > 1280 && width < 1536
+    const isBigScreen = width >= 1536
+    return { width, isMobile, isTablet, isLaptop, isDesktop, isBigScreen }
   }
   return { isMobile: undefined, isTablet: undefined, isDesktop: undefined, isBigScreen: undefined }
 }
