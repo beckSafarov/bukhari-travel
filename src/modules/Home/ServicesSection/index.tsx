@@ -2,17 +2,16 @@ import React, { useState } from 'react'
 import SupTitle from '@/modules/common/Typography/SupTitle'
 import Title from '@/modules/common/Typography/Title'
 import Para from '@/modules/common/Typography/Para'
-import { HiArrowLeft, HiArrowRight } from 'react-icons/hi2'
-import { IconType } from 'react-icons'
 import Slider from 'react-slick'
 import SectionsContainer from '../components/SectionsContainer'
 import DestinationCard from './DestinationCard'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { SlideType } from '../types'
+import ArrowIcon from './ArrowIcon'
 type IconObjType = {
-  icon: IconType,
-  onClick: (c:any)=>void
+  dir: string,
+  onClick: (c: any) => void
 }
 type CardType = {
   title: string,
@@ -47,8 +46,6 @@ const cards = [
     subtitle: 'Uzbekistan, Tashkent',
   },
 ] 
-
-
 
 const ServicesSection = () => {
   const [slick, setSlick] = useState<SlideType>()
@@ -87,14 +84,11 @@ const ServicesSection = () => {
 
   const handleSliderRef = (c: any): void => {
     if (!c || slick?.slickNext) return
-    setSlick({
-      slickNext: c.slickNext,
-      slickPrev: c.slickPrev,
-    })
+    setSlick({...c})
   }
   const icons = [
-    {icon: HiArrowLeft, onClick: handlePrev},
-    {icon: HiArrowRight, onClick: handleNext},
+    {dir: 'left', onClick: handlePrev},
+    {dir: 'right', onClick: handleNext},
   ]
   return (
     <SectionsContainer className='py-10 xsm:py-5'>
@@ -113,16 +107,8 @@ const ServicesSection = () => {
           </div>
           <div className='flex-[1.2] flex md:justify-end md:pt-0 items-end xsm:justify-center xsm:pt-3'>
             <div className='flex items-center space-x-4'>
-              {icons.map((Icon: IconObjType, i: number) => (
-                <span
-                  key={i}
-                  onClick={Icon.onClick}
-                  className={`text-gray-arrow cursor-pointer hover:text-orange  ${
-                    i === 1 ? 'hover:translate-x-1' : 'hover:-translate-x-1'
-                  } transition duration-200`}
-                >
-                  <Icon.icon size='50' />
-                </span>
+              {icons.map((icon: IconObjType, i: number) => (
+                <ArrowIcon key={i} {...icon} />
               ))}
             </div>
           </div>
