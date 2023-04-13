@@ -27,7 +27,7 @@ const Hero = () => {
             key={index}
             className=" h-screen w-screen  bg-cover bg-center "
             //before:content-[""] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black-blurred
-            style={{ background: `url(/images/${image})` }}
+            style={{ backgroundImage: `url(/images/${image})` }}
           >
             {/* container */}
             <div className={`${maxWidth} mx-auto h-full`}>
