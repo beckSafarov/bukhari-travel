@@ -6,5 +6,6 @@ export type TitleTypes = {
 }
 export type SecondaryTitleTypes = {
   children: React.ReactNode,
+  className?: string
 }
 

@@ -3,13 +3,13 @@ import React from 'react'
 import Para from '../Typography/Para'
 import SmallTitle from '../Typography/SmallTitle'
 import Circle from '../Circle'
-import {IoLogoInstagram} from 'react-icons/io5'
+import { IoLogoInstagram } from 'react-icons/io5'
 import { FaTelegramPlane, FaFacebookF } from 'react-icons/fa'
 import { IconType } from 'react-icons'
 import Link from 'next/link'
 
 type SocialIconObj = {
-  Icon: IconType,
+  Icon: IconType
   path: string
 }
 
@@ -20,35 +20,33 @@ const socialIcons = [
 ]
 
 type LinkType = {
-  label: string, 
+  label: string
   path: string
 }
 
 const Links = [
-  {label: "About Us", path: '/'},
-  {label: "Services", path: '/'},
-  {label: "News", path: '/'},
-  {label: "Careers", path: '/'},
-  {label: "Contact", path: '/'},
-]
+  { label: "About Us", path: "/" },
+  { label: "Services", path: "/" },
+  { label: "News", path: "/" },
+  { label: "Careers", path: "/" },
+  { label: "Contact", path: "/" },
+];
 const Company = [
-  {label: "About Us", path: '/'},
-  {label: "Services", path: '/'},
-  {label: "News", path: '/'},
-  {label: "Careers", path: '/'},
-  {label: "Contact", path: '/'},
-]
+  { label: "About Us", path: "/" },
+  { label: "Services", path: "/" },
+  { label: "News", path: "/" },
+  { label: "Careers", path: "/" },
+  { label: "Contact", path: "/" },
+];
 const contact = {
   address: "43 Raymond Rd.Baltemoer, London 3910",
-  phones: ['+998957003022', '+9987777777'],
-  email: "info@bukharitravel.com"
-}
+  phones: ["+998957003022", "+9987777777"],
+  email: "info@bukharitravel.com",
+};
 
-const FooterCol = ({children}:{children:React.ReactNode}) => {
-  return <div className="flex flex-col space-y-6">
-    {children}
-  </div>
-}
+const FooterCol = ({ children }: { children: React.ReactNode }) => {
+  return <div className="flex flex-col space-y-6">{children}</div>;
+};
 
 const Footer = () => {
   return (
@@ -86,7 +84,11 @@ const Footer = () => {
             <SmallTitle>Links</SmallTitle>
             <div className="flex flex-col space-y-2 lg:pb-0 pb-8">
               {Links.map((link: LinkType, i: number) => (
-                <Link className="font-sans text-gray" key={i} href={link.path}>
+                <Link
+                  className="font-sans text-gray"
+                  key={i}
+                  href={`${link.path}${link.label.toLowerCase()}`}
+                >
                   {link.label}
                 </Link>
               ))}
@@ -96,7 +98,11 @@ const Footer = () => {
             <SmallTitle>Company</SmallTitle>
             <div className="flex flex-col space-y-2 lg:pb-0 pb-8">
               {Company.map((link: LinkType, i: number) => (
-                <Link className="font-sans text-gray" key={i} href={link.path}>
+                <Link
+                  className="font-sans text-gray"
+                  key={i}
+                  href={`${link.path}${link.label.toLowerCase()}`}
+                >
                   {link.label}
                 </Link>
               ))}
@@ -118,6 +124,6 @@ const Footer = () => {
       </SectionsContainer>
     </div>
   );
-}
+};
 
 export default Footer
