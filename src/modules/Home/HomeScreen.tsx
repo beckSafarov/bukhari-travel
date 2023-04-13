@@ -9,7 +9,7 @@ import BlogSection from "./BlogSection";
 export default function HomeScreen() {
   return (
     <Layout title="Al Bukhari Travel">
-      <StaticHero title="It is Better to Travel Well Than to Arrive" />
+      <Hero/>
       <AboutUsSection />
       <ServicesSection />
       <ForCustomerSection />

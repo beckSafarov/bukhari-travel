@@ -1,16 +1,16 @@
 import { mobileSideSpacing } from '@/modules/utils'
 import React from 'react'
-const maxWidth = process.env.NEXT_PUBLIC_TW_MAX_WIDTH
+const maxWidth = process.env.NEXT_PUBLIC_MAX_WIDTH
 interface SectionsContainerProps { 
   children: React.ReactNode, 
   className: string 
 }
 
 const SectionsContainer = ({children, className}:SectionsContainerProps) => {
-  
   return (
     <div
-      className={`${maxWidth} mx-auto h-full ${mobileSideSpacing} ${className}`}
+      className={`mx-auto h-full ${mobileSideSpacing} ${className}`}
+      style={{ maxWidth: `${maxWidth}px` }}
     >
       {children}
     </div>

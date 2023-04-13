@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { mobileSideSpacing } from '@/modules/utils'
-const maxWidth = process.env.NEXT_PUBLIC_TW_MAX_WIDTH
+const maxWidth = process.env.NEXT_PUBLIC_MAX_WIDTH
 
 const NavLinks = [
   { label: 'Home', path: '/' },
@@ -24,8 +24,7 @@ const Navbar = ({}) => {
     <>
       <div className={'absolute top-5 w-full h-20 py-30 z-10'}>
         <div
-          className={`${maxWidth} my-0 mx-auto flex items-center justify-between  ${mobileSideSpacing}`}
-        >
+          className={`my-0 mx-auto flex items-center justify-between  ${mobileSideSpacing}`} style={{maxWidth: `${maxWidth}px`}}>
           <div className='flex items-center justify-center space-x-10'>
             <h1 className='text-2xl text-white font-serif font-bold'>
               Al Bukhari
