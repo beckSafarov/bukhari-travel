@@ -26,6 +26,7 @@ module.exports = {
       white: "white",
       "white-dimmed": "rgba(255, 255, 255, 0.7)",
       orange: "#F1863B",
+      "orange-light": "rgba(252, 134, 33, 0.1)",
       yellow: "yellow",
     },
     fontFamily: {
