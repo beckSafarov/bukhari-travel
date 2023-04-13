@@ -1,7 +1,10 @@
 import { useWindowSize } from './useWindowSize'
 
 const useResponsiveDesign = () => {
-  const {width} = useWindowSize() || {width: undefined, height: undefined}
+  const { width } = useWindowSize() || {
+    width: undefined,
+    height: undefined,
+  };
   if(typeof width === 'number'){
     const isMobile = width <= 460
     const isTablet = width >= 768 && width < 1024

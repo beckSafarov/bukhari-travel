@@ -3,12 +3,12 @@ module.exports = {
   content: ["./src/**/*.{html,ts,tsx}"],
   theme: {
     screens: {
-      'xsm': '320px',//small mobiles
-      'sm': '361px',//large mobiles
-      'md': '760px',//tablets
-      'lg': '1024px', //laptops
-      'xl': '1281px',//desktops
-      '2xl': '1536px' //large screens
+      xsm: "320px", //small mobiles
+      sm: "361px", //large mobiles
+      md: "760px", //tablets
+      lg: "1024px", //laptops
+      xl: "1281px", //desktops
+      "2xl": "1536px", //large screens
     },
     colors: {
       "gray-light": "#fafafa",
@@ -29,8 +29,8 @@ module.exports = {
       yellow: "yellow",
     },
     fontFamily: {
-      serif: ['"Playfair Display"', 'serif'],
-      sans: ['Open Sans', 'sans-serif'],
+      serif: ['"Playfair Display"', "serif"],
+      sans: ["Open Sans", "sans-serif"],
     },
     extend: {
       keyframes: {
@@ -41,9 +41,6 @@ module.exports = {
       },
       animation: {
         slideFromRight: "slideFromRight 0.5s ease-in-out",
-      },
-      backgroundImage: {
-        "hero-pattern": "url('/images/hero_1.png')",
       },
     },
   },
