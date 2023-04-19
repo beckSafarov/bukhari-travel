@@ -8,56 +8,60 @@ import BlogCard from './BlogCard'
 
 const blogCards = [
   {
-    title: 'Far far away, behind the word mountains',
+    id: 1,
+    title: "Far far away, behind the word mountains",
     description:
-      'Vokalia and Consonantia, there live the blind texts. Separated they live.',
-    date: 'March 14, 2023',
-    image: '/images/1.png',
-    path: '/',
+      "Vokalia and Consonantia, there live the blind texts. Separated they live.",
+    date: "March 14, 2023",
+    image: "/images/1.png",
+    path: "/",
   },
   {
-    title: 'Far far away, behind the word mountains',
+    id: 2,
+    title: "Far far away, behind the word mountains",
     description:
-      'Vokalia and Consonantia, there live the blind texts. Separated they live.',
-    date: 'March 14, 2023',
-    image: '/images/2.png',
-    path: '/',
+      "Vokalia and Consonantia, there live the blind texts. Separated they live.",
+    date: "March 14, 2023",
+    image: "/images/2.png",
+    path: "/",
   },
   {
-    title: 'Far far away, behind the word mountains',
+    id: 3,
+    title: "Far far away, behind the word mountains",
     description:
-      'Vokalia and Consonantia, there live the blind texts. Separated they live.',
-    date: 'March 14, 2023',
-    image: '/images/3.png',
-    path: '/',
+      "Vokalia and Consonantia, there live the blind texts. Separated they live.",
+    date: "March 14, 2023",
+    image: "/images/3.png",
+    path: "/",
   },
   {
-    title: 'Far far away, behind the word mountains',
+    id: 4,
+    title: "Far far away, behind the word mountains",
     description:
-      'Vokalia and Consonantia, there live the blind texts. Separated they live.',
-    date: 'March 14, 2023',
-    image: '/images/4.png',
-    path: '/',
+      "Vokalia and Consonantia, there live the blind texts. Separated they live.",
+    date: "March 14, 2023",
+    image: "/images/4.png",
+    path: "/",
   },
-]
+];
 
 const BlogSection = () => {
   return (
-    <SectionsContainer className='py-24'>
-      <div className='flex flex-col space-y-3'>
-        <div className=''>
+    <SectionsContainer className="py-24">
+      <div className="flex flex-col space-y-3">
+        <div className="">
           <SupTitle>BLOG</SupTitle>
           <Title>Recent Posts</Title>
         </div>
         {/* blog cards */}
-        <div className='flex flex-wrap items-center justify-between pt-10'>
+        <div className="flex flex-wrap items-center justify-between pt-10">
           {blogCards.map((blogCard: BlogCardType, i: number) => (
-            <BlogCard key={i} blogCard={blogCard}/>
+            <BlogCard key={blogCard.id} blogCard={blogCard} />
           ))}
         </div>
       </div>
     </SectionsContainer>
-  )
-}
+  );
+};
 
 export default BlogSection
