@@ -3,11 +3,11 @@ import React from 'react'
 import Title from '../Typography/Title'
 import useResponsiveDesign from '@/hooks/useResponsiveDesign'
 import SubTitle from '../Typography/SubTitle'
+import { StaticHeroProps } from '@/interfaces'
 const maxWidth = process.env.NEXT_PUBLIC_TW_MAX_WIDTH
 
-type StaticHeroTypes = { title: string; subtitle?: string; image?: string }
 
-const StaticHero = ({title, subtitle, image}:StaticHeroTypes) => {
+const StaticHero = ({title, subtitle, image}:StaticHeroProps) => {
   const {isMobile} = useResponsiveDesign()
   return (
     <div className='h-screen w-screen bg-cover bg-center before:content-[""] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black-blurred' style={{

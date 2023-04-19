@@ -1,7 +1,7 @@
 import React from 'react'
-import { TitleTypes } from './types'
+import { TitleProps } from '@/interfaces';
 
-const Title = ({children, ...rest}:TitleTypes) => {
+const Title = ({children, ...rest}:TitleProps) => {
   const className = rest?.className
   return (
     <h1

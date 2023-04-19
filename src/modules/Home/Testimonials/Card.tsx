@@ -1,14 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import Suptitle from "../../common/Typography/SupTitle";
+import { TestimonialsCardProps } from "@/interfaces";
 
-type Props = {
-  name: string;
-  job: string;
-  comment: string;
-  image: string;
-};
-const Card = ({ name, job, comment, image }: Props) => {
+const Card = ({ name, job, comment, image }: TestimonialsCardProps) => {
   return (
     <div className="mb-[60px]">
       <blockquote>

@@ -5,24 +5,14 @@ import SmallTitle from '../Typography/SmallTitle'
 import Circle from '../Circle'
 import { IoLogoInstagram } from 'react-icons/io5'
 import { FaTelegramPlane, FaFacebookF } from 'react-icons/fa'
-import { IconType } from 'react-icons'
 import Link from 'next/link'
-
-type SocialIconObj = {
-  Icon: IconType
-  path: string
-}
+import { LinkType, SocialIconType } from '@/types'
 
 const socialIcons = [
   { Icon: IoLogoInstagram, path: '/' },
   { Icon: FaFacebookF, path: '/' },
   { Icon: FaTelegramPlane, path: '/' },
 ]
-
-type LinkType = {
-  label: string
-  path: string
-}
 
 const Links = [
   { label: "About Us", path: "/" },
@@ -68,7 +58,7 @@ const Footer = () => {
             <div className="flex flex-col space-y-4 lg:pb-0 pb-8">
               <SmallTitle>Connect</SmallTitle>
               <div className="flex space-x-1">
-                {socialIcons.map((Social: SocialIconObj, i: number) => (
+                {socialIcons.map((Social: SocialIconType, i: number) => (
                   <Circle
                     key={i}
                     size="35px"

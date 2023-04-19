@@ -1,10 +1,7 @@
+import { SectionsContainerProps } from '@/interfaces'
 import { mobileSideSpacing } from '@/modules/utils'
 import React from 'react'
 const maxWidth = process.env.NEXT_PUBLIC_MAX_WIDTH
-interface SectionsContainerProps { 
-  children: React.ReactNode, 
-  className: string 
-}
 
 const SectionsContainer = ({children, className}:SectionsContainerProps) => {
   return (
