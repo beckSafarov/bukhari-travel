@@ -3,20 +3,24 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { mobileSideSpacing } from '@/modules/utils'
+import { NavLinkType } from '@/types'
+import DropDown from '../DropDown'
 const maxWidth = process.env.NEXT_PUBLIC_MAX_WIDTH
 
 const NavLinks = [
   { label: 'Home', path: '/' },
-  { label: 'About Us', path: '/' },
-  { label: 'Tours', path: '/' },
-  { label: 'Blog', path: '/' },
-  { label: 'Contact', path: '/' },
+  { label: 'About Us', path: '/aboutus' },
+  {
+    label: 'Tours',
+    content: [
+      { label: 'Tashkent', path: '/' },
+      { label: 'Samarkand', path: '/' },
+      { label: 'Bukhara', path: '/' },
+      { label: 'Khiva', path: '/' },
+    ],
+  },
+  { label: 'Blog', path: '/blog' },
 ]
-
-interface NavLink {
-  label: string
-  path: string
-}
 
 const Navbar = ({}) => {
   const [mobileMenuClicked, setMobileMenuClicked] = useState(false)
@@ -24,22 +28,30 @@ const Navbar = ({}) => {
     <>
       <div className={'absolute top-5 w-full h-20 py-30 z-10'}>
         <div
-          className={`my-0 mx-auto flex items-center justify-between  ${mobileSideSpacing}`} style={{maxWidth: `${maxWidth}px`}}>
+          className={`my-0 mx-auto flex items-center justify-between  ${mobileSideSpacing}`}
+          style={{ maxWidth: `${maxWidth}px` }}
+        >
           <div className='flex items-center justify-center space-x-10'>
-            <h1 className='text-2xl text-white font-serif font-bold'>
-              Al Bukhari
-            </h1>
+            <Link href='/'>
+              <h1 className='text-2xl text-white font-serif font-bold'>
+                Al Bukhari
+              </h1>
+            </Link>
             {/* menu */}
             <div className='flex justify-center text-white-dimmed space-x-7 text-sm md:hidden sm:hidden xsm:hidden  lg:block'>
-              {NavLinks.map((link: NavLink, i: number) => (
-                <Link
-                  href={link.path}
-                  key={i}
-                  className='font-sans cursor-pointer hover:text-white'
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {NavLinks.map((link: NavLinkType, i: number) =>
+                link.content ? (
+                  <DropDown data={link.content} key={i} />
+                ) : (
+                  <Link
+                    href={link.path || '/'}
+                    key={i}
+                    className='font-sans px-2 cursor-pointer hover:text-white'
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
             </div>
           </div>
           <div className='lg:block md:hidden sm:hidden xsm:hidden'>
@@ -71,15 +83,19 @@ const Navbar = ({}) => {
             <AiOutlineClose color='black' size='35' />
           </div>
           <div className='flex flex-col space-y-3'>
-            {NavLinks.map((link: NavLink, i: number) => (
-              <Link
-                href={link.path}
-                key={i}
-                className='font-sans md:text-sm xsm:text-base cursor-pointer hover:text-orange'
-              >
-                {link.label}
-              </Link>
-            ))}
+            {NavLinks.map((link: NavLinkType, i: number) =>
+              link.content ? (
+                <DropDown key={i} data={link.content} />
+              ) : (
+                <Link
+                  href={link.path || '/'}
+                  key={i}
+                  className='font-sans md:text-sm xsm:text-base cursor-pointer hover:text-orange'
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
           </div>
         </div>
       </div>

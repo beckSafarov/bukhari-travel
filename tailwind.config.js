@@ -36,12 +36,25 @@ module.exports = {
     extend: {
       keyframes: {
         slideFromRight: {
-          "0%": { right: "100%" },
-          "100%": { right: 0 },
+          "0%": { right: "100%",  },
+          "100%": {
+            right: 0 },
+        },
+        fadeIn: {
+          "0%": { opacity: 0, transform: 'translateY(10px)' },
+          "100%": { opacity: 1, transform: 'translateY(0)' }
+        },
+        fadeOut: {
+          "0%": {
+            opacity: 1, transform: 'translateY(0)'},
+          "100%": {
+            opacity: 0, transform: 'translateY(10px)'}
         },
       },
       animation: {
         slideFromRight: "slideFromRight 0.5s ease-in-out",
+        fadeIn: "fadeIn 0.1s ease-in",
+        fadeOut: "fadeOut 0.1s ease-out forwards"
       },
       backgroundImage: {
         "hero-pattern": "url('/images/hero_1.png')",

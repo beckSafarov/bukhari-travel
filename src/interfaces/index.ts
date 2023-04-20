@@ -1,3 +1,4 @@
+import { DropdownLinkType } from '@/types'
 import { IconType } from 'react-icons'
 
 export interface TitleProps {
@@ -33,3 +34,7 @@ export interface TestimonialsCardProps {
   comment: string;
   image: string;
 };
+
+export interface CustomDropdown {
+  data: Array<DropdownLinkType>
+}

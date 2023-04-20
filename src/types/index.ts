@@ -35,3 +35,14 @@ export type CardType = {
   price: number
   subtitle: string
 }
+
+export type DropdownLinkType = {
+  label: string
+  path: string
+}
+
+export type NavLinkType = {
+  label: string,
+  path?: string,
+  content?: Array<DropdownLinkType>
+}
