@@ -1,5 +1,5 @@
 import React from 'react'
-import SectionsContainer from '../components/SectionsContainer'
+import SectionsContainer from '@/modules/common/SectionsContainer'
 import SupTitle from '@/modules/common/Typography/SupTitle'
 import Title from '@/modules/common/Typography/Title'
 import BlogCard from './BlogCard'

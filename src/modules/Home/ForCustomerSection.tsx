@@ -1,7 +1,7 @@
 import React from "react";
 import TestimonialsSection from "./Testimonials/TestimonialsSection";
 import FaqSection from "./Testimonials/FaqSection";
-import SectionsContainer from "./components/SectionsContainer";
+import SectionsContainer from '@/modules/common/SectionsContainer'
 
 const ForCustomerSection = () => {
   return (

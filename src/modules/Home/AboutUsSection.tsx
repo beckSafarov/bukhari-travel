@@ -2,7 +2,7 @@ import React from 'react'
 import FullButton from '../common/FullButton'
 import SupTitle from '../common/Typography/SupTitle'
 import Title from '../common/Typography/Title'
-import SectionsContainer from './components/SectionsContainer'
+import SectionsContainer from '@/modules/common/SectionsContainer'
 import Para from '../common/Typography/Para'
 
 const images = ['about_1', 'about_2']

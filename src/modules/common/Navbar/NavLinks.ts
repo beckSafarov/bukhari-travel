@@ -1,6 +1,6 @@
 export default [
   { label: 'Home', path: '/' },
-  { label: 'About Us', path: '/aboutus' },
+  { label: 'About Us', path: '/about-us' },
   {
     label: 'Tours',
     content: [

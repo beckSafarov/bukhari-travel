@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from '@/modules/Services/Card'
 import Title from '@/modules/common/Typography/Title'
-import SectionsContainer from '@/modules/Home/components/SectionsContainer'
+import SectionsContainer from '@/modules/common/SectionsContainer'
 import StaticHero from '@/modules/common/Hero/StaticHero'
 import Layout from '../common/Layout'
 

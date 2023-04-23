@@ -4,13 +4,11 @@ import Link from 'next/link'
 import { Disclosure, Transition } from '@headlessui/react'
 import { AccordionProps } from '@/interfaces'
 
-const Accordion = ({children, content, contentClass}:AccordionProps) => {
+const Accordion = ({ children, content, contentClass }: AccordionProps) => {
   return (
     <div>
       <Disclosure>
-        <Disclosure.Button className='py-2'>
-          {children}
-        </Disclosure.Button>
+        <Disclosure.Button className='py-2'>{children}</Disclosure.Button>
         <Transition
           enter='transition duration-100 ease-out'
           enterFrom='transform scale-95 opacity-0'
@@ -20,9 +18,7 @@ const Accordion = ({children, content, contentClass}:AccordionProps) => {
           leaveTo='transform scale-95 opacity-0'
         >
           <Disclosure.Panel className='text-gray-500'>
-            <div
-              className={`flex flex-col py-1 space-y-2 ${contentClass}`}
-            >
+            <div className={`flex flex-col py-1 space-y-2 ${contentClass}`}>
               {content.map((link: AccordionElemType, i: number) => (
                 <Link
                   key={i}

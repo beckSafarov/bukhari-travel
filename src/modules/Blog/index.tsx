@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import BlogCard from "@/modules/Home/BlogSection/BlogCard";
-import SectionsContainer from "@/modules/Home/components/SectionsContainer";
+import SectionsContainer from '@/modules/common/SectionsContainer'
 import Layout from "../common/Layout";
 import StaticHero from "@/modules/common/Hero/StaticHero";
 import Data from "@/modules/Blog/BlogPageData";

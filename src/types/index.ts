@@ -49,3 +49,8 @@ export type NavLinkType = {
   path?: string,
   content?: Array<LinkType>
 }
+
+export type FAQType = {
+  question: string, 
+  content: React.ReactNode
+}

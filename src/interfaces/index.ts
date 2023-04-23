@@ -1,4 +1,4 @@
-import { LinkType } from '@/types'
+import { FAQType, LinkType } from '@/types'
 
 export interface TitleProps {
   children: React.ReactNode
@@ -23,7 +23,8 @@ export interface StaticHeroProps {
 }
 export interface SectionsContainerProps {
   children: React.ReactNode
-  className: string
+  className: string,
+  size: 'big' | 'small'
 }
 
 
@@ -47,4 +48,9 @@ export interface AccordionProps {
 export interface SidebarProps {
   mobileMenuClicked: boolean
   onClose(): void
+}
+
+export interface FAQProps {
+  data: Array<FAQType>,
+  className?: string,
 }
