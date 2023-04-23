@@ -43,3 +43,8 @@ export interface AccordionProps {
   contentClass?: string,
   content: Array<LinkType>
 }
+
+export interface SidebarProps {
+  mobileMenuClicked: boolean
+  onClose(): void
+}
