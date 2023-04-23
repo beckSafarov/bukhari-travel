@@ -1,8 +1,8 @@
 import React from 'react'
-import { SecondaryTitleTypes } from './types'
+import { SecondaryTitleProps } from '@/interfaces'
 
 
-const SubTitle = ({ children, className }: SecondaryTitleTypes) => {
+const SubTitle = ({ children, className }: SecondaryTitleProps) => {
   return <div className={`font-sans text-sm text-gray ${className}`}>{children}</div>
 }
 

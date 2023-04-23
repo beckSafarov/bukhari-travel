@@ -7,18 +7,8 @@ import SectionsContainer from '../components/SectionsContainer'
 import DestinationCard from './DestinationCard'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import { SlideType } from '../types'
 import ArrowIcon from './ArrowIcon'
-type IconObjType = {
-  dir: string,
-  onClick: (c: any) => void
-}
-type CardType = {
-  title: string,
-  image: string,
-  price: number, 
-  subtitle: string
-}
+import { CardType, IconObjType, SlideType } from '@/types'
 
 const cards = [
   {

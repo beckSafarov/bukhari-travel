@@ -1,7 +1,7 @@
 import React from 'react'
-import { SecondaryTitleTypes } from './types'
+import { SecondaryTitleProps } from '@/interfaces'
 
-const SmallTitle = ({children}:SecondaryTitleTypes) => {
+const SmallTitle = ({children}:SecondaryTitleProps) => {
   return (
     <h3 className="font-serif font-bold">{children}</h3>
   )

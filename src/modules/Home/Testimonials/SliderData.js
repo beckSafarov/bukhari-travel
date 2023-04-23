@@ -1,4 +1,4 @@
-const dataSlider = [
+const SliderData = [
   {
     id: 1,
     name: "Rob Smith",
@@ -11,7 +11,7 @@ const dataSlider = [
     id: 2,
     name: "James Woodland",
     job: "Designer",
-    image: "testimonials_2",
+    image: "testimonials_3",
     comment:
       "Each city offers a unique experience: Samarkand shows off the massive and gorgeous, Bukhara is all about inclusion and the evolution of multiple cultures, and Khiva is a well-planned and functional modern town ",
   },
@@ -24,4 +24,4 @@ const dataSlider = [
       "Each city offers a unique experience: Samarkand shows off the massive and gorgeous, Bukhara is all about inclusion and the evolution of multiple cultures, and Khiva is a well-planned and functional modern town ",
   },
 ];
-export default dataSlider;
+export default SliderData;

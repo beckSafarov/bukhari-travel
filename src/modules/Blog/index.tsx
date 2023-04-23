@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import BlogCard from "@/modules/Home/BlogSection/BlogCard";
-import { BlogCardType } from "@/modules/Home/types";
 import SectionsContainer from "@/modules/Home/components/SectionsContainer";
 import Layout from "../common/Layout";
 import StaticHero from "@/modules/common/Hero/StaticHero";
 import Data from "@/modules/Blog/BlogPageData";
+import { BlogCardType } from "@/types";
 
 const BlogPage = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -41,7 +41,7 @@ const BlogPage = () => {
               {Data.slice(
                 (currentPage - 1) * itemsPerPage,
                 currentPage * itemsPerPage
-              ).map((blogcard: BlogCardType, i: Number) => (
+              ).map((blogcard: BlogCardType) => (
                 <div key={blogcard.id} className=" px-3">
                   <BlogCard blogCard={blogcard} />
                 </div>

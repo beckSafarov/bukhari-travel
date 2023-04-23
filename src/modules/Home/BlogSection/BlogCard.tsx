@@ -1,9 +1,9 @@
 import React from 'react'
-import { BlogCardType } from '../types'
 import Para from '@/modules/common/Typography/Para'
 import Link from 'next/link'
 import Image from 'next/image'
 import useResponsiveDesign from '@/hooks/useResponsiveDesign'
+import { BlogCardType } from '@/types'
 
 const BlogCard = ({blogCard: card}:{blogCard:BlogCardType}) => {
   const {isMobile, isLaptop,isDesktop} = useResponsiveDesign()
