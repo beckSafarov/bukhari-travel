@@ -5,6 +5,8 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { mobileSideSpacing } from '@/modules/utils'
 import { NavLinkType } from '@/types'
 import DropDown from '../DropDown'
+import Accordion from '../Accordion'
+import { FiChevronDown } from 'react-icons/fi'
 const maxWidth = process.env.NEXT_PUBLIC_MAX_WIDTH
 
 const NavLinks = [
@@ -85,7 +87,12 @@ const Navbar = ({}) => {
           <div className='flex flex-col space-y-3'>
             {NavLinks.map((link: NavLinkType, i: number) =>
               link.content ? (
-                <DropDown key={i} data={link.content} />
+                <Accordion key={i} content={link.content} contentClass='text-gray-med font-sans text-sm pl-5'>
+                  <div className='flex justify-center items-center space-x-1'>
+                    <span>Tours</span>
+                    <FiChevronDown />
+                  </div>
+                </Accordion>
               ) : (
                 <Link
                   href={link.path || '/'}

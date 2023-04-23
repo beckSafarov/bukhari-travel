@@ -1,5 +1,4 @@
-import { DropdownLinkType } from '@/types'
-import { IconType } from 'react-icons'
+import { LinkType } from '@/types'
 
 export interface TitleProps {
   children: React.ReactNode
@@ -36,5 +35,11 @@ export interface TestimonialsCardProps {
 };
 
 export interface CustomDropdown {
-  data: Array<DropdownLinkType>
+  data: Array<LinkType>
+}
+
+export interface AccordionProps {
+  children: React.ReactNode,
+  contentClass?: string,
+  content: Array<LinkType>
 }

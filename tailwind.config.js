@@ -40,6 +40,14 @@ module.exports = {
           "100%": {
             right: 0 },
         },
+        slideDown: {
+          "0%":{height: '0'},
+          "100%":{height: '100%'},
+        },
+        slideUp: {
+          "0%":{height: '100%'},
+          "100%":{height: '0%'},
+        },
         fadeIn: {
           "0%": { opacity: 0, transform: 'translateY(10px)' },
           "100%": { opacity: 1, transform: 'translateY(0)' }
@@ -54,7 +62,9 @@ module.exports = {
       animation: {
         slideFromRight: "slideFromRight 0.5s ease-in-out",
         fadeIn: "fadeIn 0.1s ease-in",
-        fadeOut: "fadeOut 0.1s ease-out forwards"
+        fadeOut: "fadeOut 0.1s ease-out forwards",
+        slideDown: 'slideDown 0.3s linear forwards',
+        slideUp: 'slideUp 0.1s ease-out backwards'
       },
       backgroundImage: {
         "hero-pattern": "url('/images/hero_1.png')",

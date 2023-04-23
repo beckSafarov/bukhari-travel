@@ -36,13 +36,16 @@ export type CardType = {
   subtitle: string
 }
 
-export type DropdownLinkType = {
-  label: string
-  path: string
+export type DropdownLinkType = LinkType
+
+export type AccordionElemType = {
+  label: string,
+  path?: string,
+  onClick?(): void
 }
 
 export type NavLinkType = {
   label: string,
   path?: string,
-  content?: Array<DropdownLinkType>
+  content?: Array<LinkType>
 }
