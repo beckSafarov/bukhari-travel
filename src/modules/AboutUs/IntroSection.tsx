@@ -6,8 +6,8 @@ const IntroSection = () => {
   return (
     <SectionsContainer size='small' className='xl:py-20 md:py-10 xsm:py-10'>
       <div className='mb-10 text-center'>
-        <Title className='xl:text-3xl lg:3xl md:2xl text-2xl'>
-          Bukhari Travel — The first Islamic Travel Agency in Uzbekistan
+        <Title>
+          The first Islamic Travel Agency in Uzbekistan
         </Title>
       </div>
       <div className='flex flex-col space-y-2'>

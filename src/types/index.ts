@@ -54,3 +54,7 @@ export type FAQType = {
   question: string, 
   content: React.ReactNode
 }
+export type WhyUsDataType = {
+  title: string, 
+  subtitle: string, 
+}
