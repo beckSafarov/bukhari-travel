@@ -84,11 +84,7 @@ const Footer = () => {
             <SmallTitle>Links</SmallTitle>
             <div className="flex flex-col space-y-2 lg:pb-0 pb-8">
               {Links.map((link: LinkType, i: number) => (
-                <Link
-                  className="font-sans text-gray"
-                  key={i}
-                  href={`${link.path}${link.label.toLowerCase()}`}
-                >
+                <Link className="font-sans text-gray" key={i} href={link.path}>
                   {link.label}
                 </Link>
               ))}

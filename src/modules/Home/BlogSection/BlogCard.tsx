@@ -6,8 +6,8 @@ import Image from 'next/image'
 import useResponsiveDesign from '@/hooks/useResponsiveDesign'
 
 const BlogCard = ({blogCard: card}:{blogCard:BlogCardType}) => {
-  const {isMobile, isLaptop} = useResponsiveDesign()
-  const size = isMobile ? 150 : isLaptop ? 250 : 300
+  const {isMobile, isLaptop,isDesktop} = useResponsiveDesign()
+  const size = isMobile ? 150 : isLaptop ? 250 : isDesktop ? 260 : 300
   return (
     <div
       className='flex flex-col md:pb-7 xsm:pb-7'
