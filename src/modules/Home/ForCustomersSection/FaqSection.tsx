@@ -1,6 +1,6 @@
 import React from "react";
-import SupTitle from "../../common/Typography/SupTitle";
-import Title from "../../common/Typography/Title";
+import SupTitle from "@/modules/common/Typography/SupTitle";
+import Title from "@/modules/common/Typography/Title";
 import FAQAccordions from "@/modules/common/FAQAccordions";
 
 
