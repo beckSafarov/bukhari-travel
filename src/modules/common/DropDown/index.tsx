@@ -3,9 +3,9 @@ import Link from 'next/link'
 import { useOnClickOutside } from 'usehooks-ts'
 import { FiChevronDown } from 'react-icons/fi'
 import { DropdownLinkType } from '@/types'
-import { CustomDropdown as DropDown } from '@/interfaces'
+import { CustomDropdown as DropDownProps } from '@/interfaces'
 
-const DropDown = ({data}:DropDown) => {
+const DropDown = ({data, label}:DropDownProps) => {
   const [open, setOpen] = useState(false)
   const btnRef = useRef(null)
   const menuRef = useRef(null)
@@ -27,7 +27,7 @@ const DropDown = ({data}:DropDown) => {
         onClick={handleClick}
         className='text-white flex items-center font-sans font-normal space-x-1'
       >
-        <span>Tours</span> <FiChevronDown />
+        <span>{label}</span> <FiChevronDown />
       </p>
       {open && (
         <div

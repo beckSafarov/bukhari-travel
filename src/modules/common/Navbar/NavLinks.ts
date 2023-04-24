@@ -2,7 +2,7 @@ export default [
   { label: 'Home', path: '/' },
   { label: 'About Us', path: '/about-us' },
   {
-    label: 'Tours',
+    label: 'Destinations',
     content: [
       { label: 'Tashkent', path: '/' },
       { label: 'Samarkand', path: '/' },

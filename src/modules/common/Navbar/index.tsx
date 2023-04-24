@@ -28,7 +28,7 @@ const Navbar = ({}) => {
             <div className='flex justify-center text-white-dimmed space-x-7 text-sm md:hidden sm:hidden xsm:hidden  lg:block'>
               {NavLinks.map((link: NavLinkType, i: number) =>
                 link.content ? (
-                  <DropDown data={link.content} key={i} />
+                  <DropDown label={link.label} data={link.content} key={i} />
                 ) : (
                   <Link
                     href={link.path || '/'}

@@ -17,10 +17,7 @@ const TestimonialsSection = () => {
           <Title>Testimonials</Title>
         </div>
         <center className='pb-20'>
-          <Slider
-            {...settings}
-            className='flex justify-center items-center'
-          >
+          <Slider {...settings}>
             {TestimonialsData.map((obj, i) => (
               <center key={i} className='max-w-xl'>
                 <TestimonialCard {...obj} />

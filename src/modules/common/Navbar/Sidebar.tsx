@@ -30,7 +30,7 @@ const Sidebar = ({mobileMenuClicked, onClose}:SidebarProps) => {
                 contentClass='text-gray-med font-sans text-sm pl-5'
               >
                 <div className='flex justify-center items-center space-x-1'>
-                  <span>Tours</span>
+                  <span>{link.label}</span>
                   <FiChevronDown />
                 </div>
               </Accordion>

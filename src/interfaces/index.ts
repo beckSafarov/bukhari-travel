@@ -36,7 +36,8 @@ export interface TestimonialsCardProps {
 };
 
 export interface CustomDropdown {
-  data: Array<LinkType>
+  data: Array<LinkType>,
+  label: string
 }
 
 export interface AccordionProps {
