@@ -22,8 +22,8 @@ const TestimonialsSection = () => {
             className='flex justify-center items-center'
           >
             {TestimonialsData.map((obj, i) => (
-              <center className='max-w-xl'>
-                <TestimonialCard key={i} {...obj} />
+              <center key={i} className='max-w-xl'>
+                <TestimonialCard {...obj} />
               </center>
             ))}
           </Slider>
