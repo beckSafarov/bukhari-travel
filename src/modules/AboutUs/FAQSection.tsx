@@ -12,7 +12,7 @@ const data = Array(8).fill({
 const FAQSection = () => {
   return (
     <SectionsContainer className='py-20' size='small'>
-      <Title>Frequently Asked Questions</Title>
+      <Title className='lg:text-left xsm:text-center'>Frequently Asked Questions</Title>
       <div className="py-10">
         <FAQAccordions data={data} className='lg:pb-0 md:pt-0 pt-0 pb-0'/>
       </div>

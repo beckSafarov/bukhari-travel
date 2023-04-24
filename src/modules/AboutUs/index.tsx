@@ -4,6 +4,7 @@ import StaticHero from '../common/Hero/StaticHero'
 import IntroSection from './IntroSection'
 import FAQSection from './FAQSection'
 import WhyUsSection from './WhyUsSection'
+import TestimonialsSection from './TestimonialsSection'
 
 const AboutUs = () => {
   return (
@@ -12,6 +13,7 @@ const AboutUs = () => {
       <IntroSection/>
       <WhyUsSection/>
       <FAQSection/>
+      <TestimonialsSection/>
     </Layout>
   )
 }
