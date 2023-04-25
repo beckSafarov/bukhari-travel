@@ -7,7 +7,7 @@ module.exports = {
       sm: "361px", //large mobiles
       md: "760px", //tablets
       lg: "1024px", //laptops
-      xl: "1281px", //desktops
+      xl: "1440px", //desktops
       "2xl": "1536px", //large screens
     },
     colors: {
