@@ -1,3 +1,4 @@
+import useResponsiveDesign from '@/hooks/useResponsiveDesign'
 import FullButton from '@/modules/common/Buttons/FullButton'
 import { TourCardDataTypes, TourInfoCardTypes } from '@/types'
 import Image from 'next/image'
@@ -5,7 +6,8 @@ import React from 'react'
 
 
 const TourCard = ({ data }: { data: TourCardDataTypes }) => {
-
+  const {isMobile, isTablet} = useResponsiveDesign()
+  const imageSize = isMobile ? 500 : isTablet ? 600 : 400
   const route = data.route.split(', ').join(' -> ')
 
   const tourInfo = [
@@ -19,20 +21,23 @@ const TourCard = ({ data }: { data: TourCardDataTypes }) => {
   ]
 
   return (
-    <div className='flex flex-col py-5 bg-gray-light rounded-lg'>
-      <div className='flex'>
-        <div className='flex-1 flex items-center justify-center'>
-          <Image width={400} height={400} src={data.image} alt={data.title} />
+    <div className='flex flex-col py-5 bg-gray-light rounded-lg lg:px-0 xsm:px-5'>
+      {/* image and info block */}
+      <div className='flex lg:flex-row xsm:flex-col'>
+        {/* image container */}
+        <div className='relative flex-1 flex items-center justify-center overflow-hidden'>
+          <Image width={imageSize} height={imageSize} src={data.image} alt={data.title} />
         </div>
-        <div className='flex-1 flex flex-col space-y-4'>
-          <h1 className='font-serif font-bold text-2xl'>{data.title}</h1>
+        {/* info block */}
+        <div className='flex-1 flex flex-col space-y-4 xl:px-0 lg:pl-5 xsm:px-0'>
+          <h1 className='lg:py-0 xsm:py-5 font-serif font-bold text-2xl'>{data.title}</h1>
           {/* Tour Info */}
           <div className='flex space-x-2 py-2 border-l-4 border-red'>
             {tourInfo.map((card: TourInfoCardTypes, i: number) => (
               <div
                 key={i}
                 className={`flex-1 flex flex-col space-y-2 text-center ${
-                  i === 2 ? 'bg-orange text-white' : 'bg-white text-black'
+                  i === 2 ? 'bg-orange text-white' : 'bg-inherit text-black'
                 }`}
               >
                 <h3 className='font-bold text-base'>{card.label}</h3>
@@ -50,10 +55,11 @@ const TourCard = ({ data }: { data: TourCardDataTypes }) => {
           </div>
         </div>
       </div>
-      <div className='flex space-x-2 pt-10 pb-5 justify-center items-center'>
+      {/* buttons */}
+      <div className='flex md:flex-row xsm:flex-col md:space-x-2 xsm:space-y-2 pt-10 pb-5 justify-center md:items-end xsm:items-center'>
         <FullButton>View Tour</FullButton>
         <button
-          className={`text-black border-2 border-gray rounded-full py-[10px] px-5 text-sm hover:bg-orange hover:border-orange hover:text-white transition duration-450`}
+          className={`text-black border-2 border-gray rounded-full py-[10px] md:px-5 xsm:px-3 text-sm hover:bg-orange hover:border-orange hover:text-white transition duration-450`}
         >
           View Departures
         </button>
