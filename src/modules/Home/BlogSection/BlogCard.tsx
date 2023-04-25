@@ -7,7 +7,7 @@ import { BlogCardType } from '@/types'
 
 const BlogCard = ({blogCard: card}:{blogCard:BlogCardType}) => {
   const {isMobile, isLaptop,isDesktop} = useResponsiveDesign()
-  const size = isMobile ? 150 : isLaptop ? 250 : isDesktop ? 260 : 300
+  const size = isMobile ? 150 : isLaptop ? 215 : isDesktop ? 260 : 300;
   return (
     <div
       className='flex flex-col md:pb-7 xsm:pb-7'
