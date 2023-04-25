@@ -1,1 +1,1 @@
-export const mobileSideSpacing = "xl:px-20 lg:px-20 md:px-20 sm:px-4 xsm:px-4";
+export const mobileSideSpacing = "xl:px-0 lg:px-20 md:px-20 sm:px-4 xsm:px-4";

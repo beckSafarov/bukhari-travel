@@ -1,4 +1,4 @@
-import { IconType } from 'react-icons'
+import { FAQType, LinkType } from '@/types'
 
 export interface TitleProps {
   children: React.ReactNode
@@ -23,7 +23,8 @@ export interface StaticHeroProps {
 }
 export interface SectionsContainerProps {
   children: React.ReactNode
-  className: string
+  className: string,
+  size: 'lg' | 'sm'
 }
 
 
@@ -33,3 +34,30 @@ export interface TestimonialsCardProps {
   comment: string;
   image: string;
 };
+
+export interface CustomDropdown {
+  data: Array<LinkType>,
+  label: string
+}
+
+export interface AccordionProps {
+  children: React.ReactNode,
+  contentClass?: string,
+  content: Array<LinkType>
+}
+
+export interface SidebarProps {
+  mobileMenuClicked: boolean
+  onClose(): void
+}
+
+export interface FAQProps {
+  data: Array<FAQType>,
+  className?: string,
+}
+
+export interface ButtonProps {
+  children: React.ReactNode
+  onClick: () => void,
+  className?: string,
+}
