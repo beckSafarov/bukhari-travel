@@ -29,6 +29,13 @@ export type IconObjType = {
   onClick: (c: any) => void
 }
 
+export type DestinationCardType = {
+  title: string
+  image: string
+  price: number
+  subtitle: string
+}
+
 export type CardType = {
   title: string
   image: string
