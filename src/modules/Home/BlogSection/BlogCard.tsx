@@ -7,14 +7,14 @@ import { BlogCardType } from '@/types'
 
 const BlogCard = ({blogCard: card}:{blogCard:BlogCardType}) => {
   const {isMobile, isLaptop,isDesktop} = useResponsiveDesign()
-  const size = isMobile ? 150 : isLaptop ? 215 : isDesktop ? 260 : 300;
+  const imageSize = isMobile ? 150 : isLaptop ? 215 : isDesktop ? 260 : 300;
   return (
     <div
       className='flex flex-col md:pb-7 xsm:pb-7'
-      style={{ maxWidth: `${size}px` }}
+      style={{ maxWidth: `${imageSize}px` }}
     >
       <div>
-        <Image src={card.image} height={size} width={size} alt={card.title} />
+        <Image src={card.image} height={imageSize} width={imageSize} alt={card.title} />
       </div>
       {/* textContent */}
       <div className='flex flex-col space-y-2 pt-5'>
