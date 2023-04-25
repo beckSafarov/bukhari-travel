@@ -4,7 +4,7 @@ import Title from '../common/Typography/Title'
 
 const IntroSection = () => {
   return (
-    <SectionsContainer size='small' className='xl:py-20 md:py-10 xsm:py-10'>
+    <SectionsContainer size='sm' className='xl:py-20 md:py-10 xsm:py-10'>
       <div className='mb-10 lg:text-left xsm:text-center'>
         <Title>
           The first Islamic Travel Agency in Uzbekistan

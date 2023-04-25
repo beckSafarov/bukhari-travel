@@ -1,5 +1,4 @@
 export default [
-  { label: 'Home', path: '/' },
   { label: 'About Us', path: '/about-us' },
   {
     label: 'Destinations',
@@ -10,5 +9,6 @@ export default [
       { label: 'Khiva', path: '/' },
     ],
   },
+  { label: 'Tours', path: '/tours' },
   { label: 'Blog', path: '/blog' },
 ]

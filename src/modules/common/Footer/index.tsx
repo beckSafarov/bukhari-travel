@@ -1,7 +1,7 @@
 import SectionsContainer from '@/modules/common/SectionsContainer'
 import React from 'react'
 import Para from '../Typography/Para'
-import SmallTitle from '../Typography/SmallTitle'
+import smTitle from '../Typography/smTitle'
 import Circle from '../Circle'
 import { IoLogoInstagram } from 'react-icons/io5'
 import { FaTelegramPlane, FaFacebookF } from 'react-icons/fa'
@@ -46,7 +46,7 @@ const Footer = () => {
           {/* info block */}
           <FooterCol>
             <FooterCol>
-              <SmallTitle>About Al-Bukhari travel</SmallTitle>
+              <smTitle>About Al-Bukhari travel</smTitle>
               <div className='flex space-x-1 xl:max-w-[500px]'>
                 <Para className='text-gray max-w-[300px] xl:max-w-sm'>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -56,7 +56,7 @@ const Footer = () => {
             </FooterCol>
             {/* socials */}
             <div className='flex flex-col space-y-4 lg:pb-0 pb-8'>
-              <SmallTitle>Connect</SmallTitle>
+              <smTitle>Connect</smTitle>
               <div className='flex space-x-1'>
                 {socialIcons.map((Social: SocialIconType, i: number) => (
                   <Circle
@@ -71,7 +71,7 @@ const Footer = () => {
             </div>
           </FooterCol>
           <FooterCol>
-            <SmallTitle>Links</SmallTitle>
+            <smTitle>Links</smTitle>
             <div className='flex flex-col space-y-2 lg:pb-0 pb-8'>
               {Links.map((link: LinkType, i: number) => (
                 <Link className='font-sans text-gray' key={i} href={link.path}>
@@ -81,7 +81,7 @@ const Footer = () => {
             </div>
           </FooterCol>
           <FooterCol>
-            <SmallTitle>Company</SmallTitle>
+            <smTitle>Company</smTitle>
             <div className='flex flex-col space-y-2 lg:pb-0 pb-8'>
               {Company.map((link: LinkType, i: number) => (
                 <Link className='font-sans text-gray' key={i} href={link.path}>
@@ -91,7 +91,7 @@ const Footer = () => {
             </div>
           </FooterCol>
           <FooterCol>
-            <SmallTitle>Contact</SmallTitle>
+            <smTitle>Contact</smTitle>
             <div className='flex flex-col space-y-2'>
               <Para className='text-gray'>{contact.address}</Para>
               {contact.phones.map((phone: string, i: number) => (

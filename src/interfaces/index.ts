@@ -24,7 +24,7 @@ export interface StaticHeroProps {
 export interface SectionsContainerProps {
   children: React.ReactNode
   className: string,
-  size: 'big' | 'small'
+  size: 'lg' | 'sm'
 }
 
 
@@ -53,5 +53,11 @@ export interface SidebarProps {
 
 export interface FAQProps {
   data: Array<FAQType>,
+  className?: string,
+}
+
+export interface ButtonProps {
+  children: React.ReactNode
+  onClick: () => void,
   className?: string,
 }

@@ -58,3 +58,21 @@ export type WhyUsDataType = {
   title: string, 
   subtitle: string, 
 }
+export type TourInfoCardTypes = {
+  label: string
+  body: string | number
+}
+
+export type TourInfoType = {
+  days: number,
+  groupSize: number,
+  price: number
+}
+
+export type TourCardDataTypes = {
+  title: string
+  image: string,
+  tourInfo: TourInfoType
+  route: string,
+  description: string,
+}

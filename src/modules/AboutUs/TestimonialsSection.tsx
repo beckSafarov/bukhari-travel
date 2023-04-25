@@ -12,7 +12,7 @@ import TestimonialCard from "@/modules/common/Testimonials/TestimonialCard";
 const TestimonialsSection = () => {
   return (
     <div className='w-screen h-full bg-gray-light'>
-      <SectionsContainer className='py-20' size='small'>
+      <SectionsContainer className='py-20' size='sm'>
         <div className='pb-20 lg:text-left xsm:text-center'>
           <Title>Testimonials</Title>
         </div>

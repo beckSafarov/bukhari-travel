@@ -1,5 +1,5 @@
 import React from 'react'
-import FullButton from '../common/FullButton'
+import FullButton from '../common/Buttons/FullButton'
 import SupTitle from '../common/Typography/SupTitle'
 import Title from '../common/Typography/Title'
 import SectionsContainer from '@/modules/common/SectionsContainer'
@@ -27,7 +27,7 @@ const AboutUsSection = () => {
               large language ocean.
             </Para>
             <Para>
-              A small river named Duden flows by their place and supplies it
+              A sm river named Duden flows by their place and supplies it
               with the necessary regelialia. It is a paradisematic country, in
               which roasted parts of sentences fly into your mouth.
             </Para>
