@@ -4,9 +4,8 @@ import { TourCardDataTypes, TourInfoCardTypes } from '@/types'
 import Image from 'next/image'
 import React from 'react'
 
-
 const TourCard = ({ data }: { data: TourCardDataTypes }) => {
-  const {isMobile, isTablet} = useResponsiveDesign()
+  const { isMobile, isTablet } = useResponsiveDesign()
   const imageSize = isMobile ? 500 : isTablet ? 600 : 400
   const route = data.route.split(', ').join(' -> ')
 
@@ -23,14 +22,21 @@ const TourCard = ({ data }: { data: TourCardDataTypes }) => {
   return (
     <div className='flex flex-col py-5 bg-gray-light rounded-lg lg:px-0 xsm:px-5'>
       {/* image and info block */}
-      <div className='flex lg:flex-row xsm:flex-col'>
+      <div className='flex lg:flex-row lg:space-x-3 md:space-x-0 xsm:flex-col'>
         {/* image container */}
         <div className='relative flex-1 flex items-center justify-center overflow-hidden'>
-          <Image width={imageSize} height={imageSize} src={data.image} alt={data.title} />
+          <Image
+            width={imageSize}
+            height={imageSize}
+            src={data.image}
+            alt={data.title}
+          />
         </div>
         {/* info block */}
-        <div className='flex-1 flex flex-col space-y-4 xl:px-0 lg:pl-5 xsm:px-0'>
-          <h1 className='lg:py-0 xsm:py-5 font-serif font-bold text-2xl'>{data.title}</h1>
+        <div className='flex-1 flex flex-col space-y-4 xsm:px-0'>
+          <h1 className='lg:py-0 xsm:py-5 font-serif font-bold text-2xl'>
+            {data.title}
+          </h1>
           {/* Tour Info */}
           <div className='flex space-x-2 py-2 border-l-4 border-red'>
             {tourInfo.map((card: TourInfoCardTypes, i: number) => (
