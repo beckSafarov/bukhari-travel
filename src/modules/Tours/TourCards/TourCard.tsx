@@ -47,7 +47,7 @@ const TourCard = ({ data }: { data: TourCardDataTypes }) => {
           </div>
           <div className='flex flex-col space-y-1'>
             {textInfo.map((info, i) => (
-              <div>
+              <div key={i}>
                 <span className='font-bold font-sans'>{info.label}:</span>
                 <span className='font-normal-font-sans'>{' ' + info.body}</span>
               </div>
