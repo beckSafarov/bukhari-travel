@@ -1,8 +1,8 @@
 import React from 'react'
-import FullButton from '../common/FullButton'
+import FullButton from '../common/Buttons/FullButton'
 import SupTitle from '../common/Typography/SupTitle'
 import Title from '../common/Typography/Title'
-import SectionsContainer from './components/SectionsContainer'
+import SectionsContainer from '@/modules/common/SectionsContainer'
 import Para from '../common/Typography/Para'
 
 const images = ['about_1', 'about_2']
@@ -27,7 +27,7 @@ const AboutUsSection = () => {
               large language ocean.
             </Para>
             <Para>
-              A small river named Duden flows by their place and supplies it
+              A sm river named Duden flows by their place and supplies it
               with the necessary regelialia. It is a paradisematic country, in
               which roasted parts of sentences fly into your mouth.
             </Para>

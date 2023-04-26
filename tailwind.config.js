@@ -3,11 +3,11 @@ module.exports = {
   content: ["./src/**/*.{html,ts,tsx}"],
   theme: {
     screens: {
-      xsm: "320px", //small mobiles
+      xsm: "320px", //sm mobiles
       sm: "361px", //large mobiles
       md: "760px", //tablets
       lg: "1024px", //laptops
-      xl: "1281px", //desktops
+      xl: "1440px", //desktops
       "2xl": "1536px", //large screens
     },
     colors: {
@@ -36,12 +36,35 @@ module.exports = {
     extend: {
       keyframes: {
         slideFromRight: {
-          "0%": { right: "100%" },
-          "100%": { right: 0 },
+          "0%": { right: "100%",  },
+          "100%": {
+            right: 0 },
+        },
+        slideDown: {
+          "0%":{height: '0'},
+          "100%":{height: '100%'},
+        },
+        slideUp: {
+          "0%":{height: '100%'},
+          "100%":{height: '0%'},
+        },
+        fadeIn: {
+          "0%": { opacity: 0, transform: 'translateY(10px)' },
+          "100%": { opacity: 1, transform: 'translateY(0)' }
+        },
+        fadeOut: {
+          "0%": {
+            opacity: 1, transform: 'translateY(0)'},
+          "100%": {
+            opacity: 0, transform: 'translateY(10px)'}
         },
       },
       animation: {
         slideFromRight: "slideFromRight 0.5s ease-in-out",
+        fadeIn: "fadeIn 0.1s ease-in",
+        fadeOut: "fadeOut 0.1s ease-out forwards",
+        slideDown: 'slideDown 0.3s linear forwards',
+        slideUp: 'slideUp 0.1s ease-out backwards'
       },
       backgroundImage: {
         "hero-pattern": "url('/images/hero_1.png')",
