@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, FormEvent } from "react";
 import Layout from "../common/Layout";
 import StaticHero from "../common/Hero/StaticHero";
 import SectionsContainer from "../common/SectionsContainer";
@@ -10,9 +10,15 @@ import { GoClock } from "react-icons/Go";
 import FullButton from "../common/Buttons/FullButton";
 
 const ContactUsPage = () => {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
     // handle form submission here
+  };
+
+  const handleClick = () => {
+    formRef.current?.submit();
   };
   return (
     <Layout>
@@ -75,24 +81,24 @@ const ContactUsPage = () => {
             </div>
             <div className=" mt-12 lg:mt-0 min-w-[60%]">
               {/**message-sender block */}
-              <form onSubmit={handleSubmit}>
+              <form ref={formRef} onSubmit={handleSubmit}>
                 <div className="flex justify-between ">
                   <input
                     type="text"
                     placeholder="Your name"
-                    className="flex text-left justify-start items-start focus:outline-none focus:border-orange border px-8 w-[45%] py-2"
+                    className="flex text-left justify-start items-start focus:outline-none focus:border-orange border px-4 md:px-8 w-[45%] py-2"
                   />
                   <input
                     type="text"
                     placeholder="Your email"
-                    className="focus:outline-none focus:border-orange border px-8 w-[45%] py-2"
+                    className="focus:outline-none focus:border-orange border px-4 md:px-8 w-[45%] py-2"
                   />
                 </div>
                 <div>
                   <input
                     type="text"
                     placeholder="Subject"
-                    className="focus:outline-none focus:border-orange border px-8 py-2 mt-4 w-full"
+                    className="focus:outline-none focus:border-orange border px-4 md:px-8 py-2 mt-4 w-full"
                   />
                 </div>
                 <div>
@@ -100,12 +106,11 @@ const ContactUsPage = () => {
                     cols={30}
                     rows={7}
                     placeholder="Message"
-                    className="focus:outline-none focus:border-orange border px-8 py-2  w-full mt-4 mb-3 flex justify-start text-start h-48"
+                    className="focus:outline-none focus:border-orange border px-4 md:px-8 py-2  w-full mt-4 mb-3 flex justify-start text-start h-48"
                   />
                 </div>
-                <button type="submit">
-                  <FullButton>Send Message</FullButton>
-                </button>
+
+                <FullButton onClick={handleClick}>Send Message</FullButton>
               </form>
             </div>
           </div>
