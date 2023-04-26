@@ -5,8 +5,8 @@ import SectionsContainer from "../common/SectionsContainer";
 import Title from "../common/Typography/Title";
 import SupTitle from "../common/Typography/SupTitle";
 import SubTitle from "../common/Typography/SubTitle";
-import { MdLocationOn, MdOutlineEmail, MdCall } from "react-icons/Md";
-import { GoClock } from "react-icons/Go";
+import { MdLocationOn, MdOutlineEmail, MdCall } from "react-icons/md";
+import { GoClock } from "react-icons/go";
 import FullButton from "../common/Buttons/FullButton";
 
 const ContactUsPage = () => {
