@@ -1,13 +1,13 @@
 import React from "react";
 import Layout from "../common/Layout";
 import StaticHero from "../common/Hero/StaticHero";
-import SectionsContainer from "@/modules/Home/components/SectionsContainer";
+import SectionsContainer from "../common/SectionsContainer";
 import Title from "../common/Typography/Title";
 import SupTitle from "../common/Typography/SupTitle";
 import SubTitle from "../common/Typography/SubTitle";
 import { MdLocationOn, MdOutlineEmail, MdCall } from "react-icons/Md";
 import { GoClock } from "react-icons/Go";
-import FullButton from "../common/FullButton";
+import FullButton from "../common/Buttons/FullButton";
 
 const ContactUsPage = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
