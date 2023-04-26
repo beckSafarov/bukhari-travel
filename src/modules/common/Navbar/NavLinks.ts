@@ -1,14 +1,15 @@
-export default [
-  { label: 'About Us', path: '/about-us' },
+const NavLinks = [
+  { label: "About Us", path: "/about-us" },
   {
-    label: 'Destinations',
+    label: "Destinations",
     content: [
-      { label: 'Tashkent', path: '/' },
-      { label: 'Samarkand', path: '/' },
-      { label: 'Bukhara', path: '/' },
-      { label: 'Khiva', path: '/' },
+      { label: "Tashkent", path: "/" },
+      { label: "Samarkand", path: "/" },
+      { label: "Bukhara", path: "/" },
+      { label: "Khiva", path: "/" },
     ],
   },
-  { label: 'Tours', path: '/tours' },
-  { label: 'Blog', path: '/blog' },
-]
+  { label: "Tours", path: "/tours" },
+  { label: "Blog", path: "/blog" },
+];
+export default NavLinks;

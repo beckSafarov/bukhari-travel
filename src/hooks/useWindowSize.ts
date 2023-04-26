@@ -31,7 +31,7 @@ export function useWindowSize() {
 }
 
 export function useWindowSizeWithThrottling(seconds = 1000) {
-  const [windowSize, setWindowSize] = useState<WindowSizeType>()
+  const [windowSize, setWindowSize] = useState<WindowSizeType>();
 
   useEffect(() => {
     // Handler to call on window resize
@@ -40,15 +40,15 @@ export function useWindowSizeWithThrottling(seconds = 1000) {
       setWindowSize({
         width: window.innerWidth,
         height: window.innerHeight,
-      })
+      });
     }
     // Add event listener
-    window.addEventListener('resize', throttle(handleResize, seconds))
+    window.addEventListener("resize", throttle(handleResize, seconds));
     // Call handler right away so state gets updated with initial window size
-    handleResize()
+    handleResize();
     // Remove event listener on cleanup
     return () =>
-      window.removeEventListener('resize', throttle(handleResize, seconds))
-  }, []) // Empty array ensures that effect is only run on mount
-  return windowSize
+      window.removeEventListener("resize", throttle(handleResize, seconds));
+  }, [seconds]); // Empty array ensures that effect is only run on mount
+  return windowSize;
 }
