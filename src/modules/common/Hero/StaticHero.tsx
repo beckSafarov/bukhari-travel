@@ -10,8 +10,8 @@ const maxWidth = process.env.NEXT_PUBLIC_TW_MAX_WIDTH
 const StaticHero = ({title, subtitle, image}:StaticHeroProps) => {
   const {isMobile} = useResponsiveDesign()
   return (
-    <div className='h-screen w-screen bg-cover bg-center before:content-[""] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black-blurred' style={{
-      backgroundImage: `url(${image})`
+    <div className='h-[50vh] w-screen bg-cover bg-center before:content-[""] before:absolute before:top-0 before:left-0 before:w-full before:h-[50vh] before:bg-black-blurred' style={{
+      backgroundImage: `url(${image})`,
     }}>
       {/* container */}
       <div className={`${maxWidth} mx-auto h-full`}>

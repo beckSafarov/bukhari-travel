@@ -2,7 +2,7 @@ import React from 'react'
 import SectionsContainer from '@/modules/common/SectionsContainer'
 import SupTitle from '@/modules/common/Typography/SupTitle'
 import Title from '@/modules/common/Typography/Title'
-import BlogCard from './BlogCard'
+import BlogCard from '@/modules/common/BlogCard'
 import { BlogCardType } from '@/types'
 import { blogCards } from './BlogCardsData'
 
