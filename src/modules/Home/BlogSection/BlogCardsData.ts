@@ -6,7 +6,7 @@ export const blogCards = [
       'Vokalia and Consonantia, there live the blind texts. Separated they live.',
     date: 'March 14, 2023',
     image: '/images/1.png',
-    path: '/',
+    path: '/blog/1',
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const blogCards = [
       'Vokalia and Consonantia, there live the blind texts. Separated they live.',
     date: 'March 14, 2023',
     image: '/images/2.png',
-    path: '/',
+    path: '/blog/1',
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const blogCards = [
       'Vokalia and Consonantia, there live the blind texts. Separated they live.',
     date: 'March 14, 2023',
     image: '/images/3.png',
-    path: '/',
+    path: '/blog/1',
   },
   {
     id: 4,
@@ -33,6 +33,6 @@ export const blogCards = [
       'Vokalia and Consonantia, there live the blind texts. Separated they live.',
     date: 'March 14, 2023',
     image: '/images/4.png',
-    path: '/',
+    path: '/blog/1',
   },
 ]

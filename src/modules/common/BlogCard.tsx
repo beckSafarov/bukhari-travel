@@ -6,15 +6,23 @@ import useResponsiveDesign from '@/hooks/useResponsiveDesign'
 import { BlogCardType } from '@/types'
 
 const BlogCard = ({blogCard: card}:{blogCard:BlogCardType}) => {
-  const {isMobile, isLaptop,isDesktop} = useResponsiveDesign()
-  const imageSize = isMobile ? 150 : isLaptop ? 215 : isDesktop ? 260 : 300;
+  const {isMobile, isLaptop, isDesktop} = useResponsiveDesign()
+  const imgMaxWidth = isMobile ? 150 : isLaptop ? 215 : isDesktop ? 260 : 300;
+  const imgMinWidth = isMobile ? 150 : isLaptop ? 150 : 200;
   return (
     <div
       className='flex flex-col md:pb-7 xsm:pb-7'
-      style={{ maxWidth: `${imageSize}px` }}
+      style={{ maxWidth: `${imgMaxWidth}px`, minWidth: `${imgMinWidth}px` }}
     >
       <div>
-        <Image src={card.image} height={imageSize} width={imageSize} alt={card.title} />
+        <Link href={card.path}>
+          <Image
+            src={card.image}
+            height={imgMaxWidth}
+            width={imgMaxWidth}
+            alt={card.title}
+          />
+        </Link>
       </div>
       {/* textContent */}
       <div className='flex flex-col space-y-2 pt-5'>

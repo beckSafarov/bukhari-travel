@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import BlogCard from "@/modules/Home/BlogSection/BlogCard";
+import BlogCard from "@/modules/common/BlogCard";
 import SectionsContainer from '@/modules/common/SectionsContainer'
 import Layout from "../common/Layout";
 import StaticHero from "@/modules/common/Hero/StaticHero";
@@ -29,34 +29,34 @@ const BlogPage = () => {
   };
 
   return (
-    <Layout title="Blog">
+    <Layout title='Blog'>
       <StaticHero
-        title="Blog"
-        subtitle="Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts."
+        title='Blog'
+        subtitle='Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'
       />
-      <div className="py-28">
+      <div className='py-28'>
         <SectionsContainer>
-          <div className="blog mx-auto">
-            <div className="grid lg:grid-cols-4 grid-cols-2 transition-all duration-700">
+          <div className='blog mx-auto'>
+            <div className='grid lg:grid-cols-4 grid-cols-2 transition-all duration-700'>
               {Data.slice(
                 (currentPage - 1) * itemsPerPage,
                 currentPage * itemsPerPage
               ).map((blogcard: BlogCardType) => (
-                <div key={blogcard.id} className=" px-3">
+                <div key={blogcard.id} className=' px-3'>
                   <BlogCard blogCard={blogcard} />
                 </div>
               ))}
             </div>
-            <div className="flex justify-center py-12">
+            <div className='flex justify-center py-12'>
               {getPaginationButtons().map((page) => (
                 <button
                   key={page}
                   className={`${
                     page === currentPage
-                      ? "bg-orange text-white"
-                      : "bg-orange-light "
+                      ? 'bg-orange text-white'
+                      : 'bg-orange-light '
                   } ${
-                    animation ? "slideFromRight" : ""
+                    animation ? 'slideFromRight' : ''
                   } text-orange font-semibold py-4 px-4 mx-1 rounded-full cursor-pointer h-8 w-8 flex justify-center items-center transition-all hover:bg-orange hover:text-white duration-500`}
                   onClick={() => handleClick(page)}
                   disabled={page > totalPages}
@@ -69,6 +69,6 @@ const BlogPage = () => {
         </SectionsContainer>
       </div>
     </Layout>
-  );
+  )
 };
 export default BlogPage;
