@@ -20,7 +20,7 @@ const BlogPage = () => {
     setTimeout(() => {
       setCurrentPage(newPage);
       setAnimation(false);
-    }, 500);
+    }, 100);
   };
 
   const getPaginationButtons = () => {

@@ -22,10 +22,10 @@ const DropDown = ({data, label}:DropDownProps) => {
   useOnClickOutside(menuRef, handleOutsideClick)
 
   return (
-    <button ref={btnRef} className='relative py-1 px-2'>
+    <button ref={btnRef} className="relative py-1 px-2">
       <p
         onClick={handleClick}
-        className='text-white flex items-center font-sans font-normal space-x-1'
+        className="text-white flex items-center font-sans font-normal space-x-1"
       >
         <span>{label}</span> <FiChevronDown />
       </p>
@@ -34,15 +34,15 @@ const DropDown = ({data, label}:DropDownProps) => {
           ref={menuRef}
           className={`absolute top-5 left-0 mt-3 ${
             open
-              ? 'flex animate-fadeIn'
-              : 'transition duration-150 animate-fadeOut'
+              ? "flex animate-fadeIn"
+              : "transition duration-150 animate-fadeOut"
           } flex-col py-5 px-2 flex justify-center space-y-2 text-left bg-white rounded-sm`}
         >
           {data.map((menuLink: DropdownLinkType, i: number) => (
             <div key={i}>
               <Link
                 className={`py-2 px-2 text-black hover:text-orange rounded-md`}
-                href={menuLink.path}
+                href={`/Destinations/${menuLink.label}`}
               >
                 {menuLink.label}
               </Link>
@@ -51,7 +51,7 @@ const DropDown = ({data, label}:DropDownProps) => {
         </div>
       )}
     </button>
-  )
+  );
 }
 
 export default DropDown

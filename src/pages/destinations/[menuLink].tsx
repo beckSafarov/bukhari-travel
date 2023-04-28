@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
+import DestinationPage from "@/modules/DestinationPage";
 
 const array = [
   {
@@ -21,15 +22,16 @@ const destination = () => {
   const router = useRouter();
   const { menuLink: destName } = router.query;
   const el = array.find((element) => element.name === destName);
-  console.log(destName);
-  return (
-    <div>
-      {el?.name}
-      {el?.country}
-      {el?.currency}
-      hhaha
-    </div>
-  );
+
+  return <DestinationPage />;
+  // return (
+  //   <div>
+  //     {el?.name}
+  //     {el?.country}
+  //     {el?.currency}
+  //     hhaha
+  //   </div>
+  // );
 };
 
 export default destination;
