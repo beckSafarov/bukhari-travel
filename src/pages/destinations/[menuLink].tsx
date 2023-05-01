@@ -20,7 +20,7 @@ const destination = () => {
   /* eslint-disable-next-line
       react-hooks/rules-of-hooks */
   const router = useRouter();
-  const { menuLink: destName } = router.query;
+  const { MenuLink: destName } = router.query;
   const el = array.find((element) => element.name === destName);
 
   return <DestinationPage />;

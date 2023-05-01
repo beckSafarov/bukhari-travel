@@ -2,10 +2,11 @@ import React from "react";
 import Layout from "../common/Layout";
 import StaticHero from "../common/Hero/StaticHero";
 import DestinationCard from "./Card";
-import QuestionFormSection from "./questionFormSection";
-import Title from "../common/Typography/Title";
+import QuestionFormSection from "./QuestionFormSection";
+import SupTitle from "../common/Typography/SupTitle";
 import SectionsContainer from "../common/SectionsContainer";
 import FullButton from "../common/Buttons/FullButton";
+import Title from "../common/Typography/Title";
 
 const DestinationPage = () => {
   return (
@@ -69,7 +70,7 @@ const DestinationPage = () => {
       {/**Highlights section start------- */}
       <div className="flex flex-col items-center">
         <Title className="py-6">Travel highlights of Tashkent</Title>
-        <p className="max-w-[50%]">
+        <p className="max-w-[50%] pb-6">
           Uzbekistan’s cities tell travelers captivating stories about the
           Golden Age of Islam and the Silk Road; when pioneering advancements in
           astrology, mathematics, and medicine took place. Bukhara is where

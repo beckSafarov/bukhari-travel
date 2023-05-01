@@ -38,13 +38,13 @@ const DropDown = ({data, label}:DropDownProps) => {
               : "transition duration-150 animate-fadeOut"
           } flex-col py-5 px-2 flex justify-center space-y-2 text-left bg-white rounded-sm`}
         >
-          {data.map((menuLink: DropdownLinkType, i: number) => (
+          {data.map((MenuLink: DropdownLinkType, i: number) => (
             <div key={i}>
               <Link
                 className={`py-2 px-2 text-black hover:text-orange rounded-md`}
-                href={`/Destinations/${menuLink.label}`}
+                href={`/Destinations/${MenuLink.label}`}
               >
-                {menuLink.label}
+                {MenuLink.label}
               </Link>
             </div>
           ))}

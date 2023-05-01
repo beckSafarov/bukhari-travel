@@ -1,6 +1,8 @@
 import React, { useRef, FormEvent } from "react";
 import SectionsContainer from "../common/SectionsContainer";
 import FullButton from "../common/Buttons/FullButton";
+import Title from "../common/Typography/Title";
+import SubTitle from "../common/Typography/SubTitle";
 
 const QuestionFormSection = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -17,6 +19,10 @@ const QuestionFormSection = () => {
     <div className="bg-gray-light items-center flex">
       <SectionsContainer>
         <form ref={formRef} onSubmit={handleSubmit}>
+          <Title className="py-4">Private tour enquiry</Title>
+          <SubTitle className="pb-4">
+            Get asnwers for your questions about Tashkent tours
+          </SubTitle>
           <div className="flex justify-between ">
             <input
               type="text"
