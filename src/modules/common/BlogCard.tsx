@@ -9,6 +9,7 @@ const BlogCard = ({blogCard: card}:{blogCard:BlogCardType}) => {
   const {isMobile, isLaptop, isDesktop} = useResponsiveDesign()
   const imgMaxWidth = isMobile ? 150 : isLaptop ? 215 : isDesktop ? 260 : 300;
   const imgMinWidth = isMobile ? 150 : isLaptop ? 150 : 200;
+
   return (
     <div
       className='flex flex-col md:pb-7 xsm:pb-7'
