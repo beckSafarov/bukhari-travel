@@ -11,15 +11,14 @@ const DropDown = ({data, label}:DropDownProps) => {
   const menuRef = useRef(null)
   
   const handleClick = () => {
-    if(open) return
-    setOpen(true)
-  }
+    setOpen(true);
+  };
 
   const handleOutsideClick = () => {
-    setOpen(false)
-  }
-  
-  useOnClickOutside(menuRef, handleOutsideClick)
+    setOpen(false);
+  };
+
+  useOnClickOutside(menuRef, handleOutsideClick);
 
   return (
     <button ref={btnRef} className="relative py-1 px-2">
@@ -41,6 +40,7 @@ const DropDown = ({data, label}:DropDownProps) => {
           {data.map((MenuLink: DropdownLinkType, i: number) => (
             <div key={i}>
               <Link
+                onClick={handleOutsideClick}
                 className={`py-2 px-2 text-black hover:text-orange rounded-md`}
                 href={`/Destinations/${MenuLink.label}`}
               >
