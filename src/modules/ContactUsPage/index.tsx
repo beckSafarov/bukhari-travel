@@ -2,6 +2,7 @@ import React, { useRef, FormEvent } from "react";
 import Layout from "../common/Layout";
 import StaticHero from "../common/Hero/StaticHero";
 import SectionsContainer from "../common/SectionsContainer";
+import QuestionForm from "../common/QuestionForm";
 import Title from "../common/Typography/Title";
 import SupTitle from "../common/Typography/SupTitle";
 import SubTitle from "../common/Typography/SubTitle";
@@ -81,37 +82,12 @@ const ContactUsPage = () => {
             </div>
             <div className=" mt-12 lg:mt-0 min-w-[60%]">
               {/**message-sender block */}
-              <form ref={formRef} onSubmit={handleSubmit}>
-                <div className="flex justify-between ">
-                  <input
-                    type="text"
-                    placeholder="Your name"
-                    className="flex text-left justify-start items-start focus:outline-none focus:border-orange border px-4 md:px-8 w-[45%] py-2"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Your email"
-                    className="focus:outline-none focus:border-orange border px-4 md:px-8 w-[45%] py-2"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Subject"
-                    className="focus:outline-none focus:border-orange border px-4 md:px-8 py-2 mt-4 w-full"
-                  />
-                </div>
-                <div>
-                  <textarea
-                    cols={30}
-                    rows={7}
-                    placeholder="Message"
-                    className="focus:outline-none focus:border-orange border px-4 md:px-8 py-2  w-full mt-4 mb-3 flex justify-start text-start h-48"
-                  />
-                </div>
-
-                <FullButton onClick={handleClick}>Send Message</FullButton>
-              </form>
+              <QuestionForm
+                formRef={formRef}
+                handleClick={handleClick}
+                handleSubmit={handleSubmit}
+                buttonText="Send Message"
+              />
             </div>
           </div>
         </div>

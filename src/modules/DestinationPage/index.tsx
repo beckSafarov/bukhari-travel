@@ -3,6 +3,7 @@ import Layout from "../common/Layout";
 import StaticHero from "../common/Hero/StaticHero";
 import DestinationCard from "./Card";
 import QuestionFormSection from "./QuestionFormSection";
+import ImageSlider from "./ImageSlider";
 import SupTitle from "../common/Typography/SupTitle";
 import SectionsContainer from "../common/SectionsContainer";
 import FullButton from "../common/Buttons/FullButton";
@@ -87,6 +88,18 @@ const DestinationPage = () => {
           more about our selection of top places to visit in Uzbekistan on our
           travel blog.
         </p>
+      </div>
+      <ImageSlider />
+      <div className="flex flex-col items-center justify-center py-10 ">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/2V-2ABkUREE?showInfo=0"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"
+        ></iframe>
+
+        <SupTitle>INTRODUCTORY VIDEO</SupTitle>
       </div>
       <QuestionFormSection />
       {/**Highlights section end--------- */}

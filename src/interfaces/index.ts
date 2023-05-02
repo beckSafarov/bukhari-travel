@@ -1,4 +1,5 @@
 import { FAQType, LinkType } from '@/types'
+import React, { FormEvent } from 'react'
 
 export interface TitleProps {
   children: React.ReactNode
@@ -33,6 +34,13 @@ export interface TestimonialsCardProps {
   job: string;
   comment: string;
   image: string;
+};
+
+export interface QuestionFormProps {
+  formRef:React.RefObject<HTMLFormElement>,
+  handleSubmit(event:FormEvent):void,
+  handleClick():void,
+  buttonText: string,
 };
 
 export interface CustomDropdown {
