@@ -6,7 +6,7 @@ const Data = [
       "Vokalia and Consonantia, there live the blind texts. Separated they live.",
     date: "March 14, 2023",
     image: "/images/1.png",
-    path: "/",
+    path: "/blog/1",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const Data = [
       "Vokalia and Consonantia, there live the blind texts. Separated they live.",
     date: "March 14, 2023",
     image: "/images/2.png",
-    path: "/",
+    path: "/blog/1",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const Data = [
       "Vokalia and Consonantia, there live the blind texts. Separated they live.",
     date: "March 14, 2023",
     image: "/images/3.png",
-    path: "/",
+    path: "/blog/1",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const Data = [
       "Vokalia and Consonantia, there live the blind texts. Separated they live.",
     date: "March 14, 2023",
     image: "/images/4.png",
-    path: "/",
+    path: "/blog/1",
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const Data = [
       "Vokalia and Consonantia, there live the blind texts. Separated they live.",
     date: "March 14, 2023",
     image: "/images/1.png",
-    path: "/",
+    path: "/blog/1",
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ const Data = [
       "Vokalia and Consonantia, there live the blind texts. Separated they live.",
     date: "March 14, 2023",
     image: "/images/2.png",
-    path: "/",
+    path: "/blog/1",
   },
   {
     id: 7,
@@ -60,7 +60,7 @@ const Data = [
       "Vokalia and Consonantia, there live the blind texts. Separated they live.",
     date: "March 14, 2023",
     image: "/images/3.png",
-    path: "/",
+    path: "/blog/1",
   },
   {
     id: 8,
@@ -69,7 +69,7 @@ const Data = [
       "Vokalia and Consonantia, there live the blind texts. Separated they live.",
     date: "March 14, 2023",
     image: "/images/4.png",
-    path: "/",
+    path: "/blog/1",
   },
   {
     id: 9,
@@ -78,7 +78,7 @@ const Data = [
       "Vokalia and Consonantia, there live the blind texts. Separated they live.",
     date: "March 14, 2023",
     image: "/images/1.png",
-    path: "/",
+    path: "/blog/1",
   },
   {
     id: 10,
@@ -87,7 +87,7 @@ const Data = [
       "Vokalia and Consonantia, there live the blind texts. Separated they live.",
     date: "March 14, 2023",
     image: "/images/2.png",
-    path: "/",
+    path: "/blog/1",
   },
   {
     id: 11,
@@ -96,7 +96,7 @@ const Data = [
       "Vokalia and Consonantia, there live the blind texts. Separated they live.",
     date: "March 14, 2023",
     image: "/images/3.png",
-    path: "/",
+    path: "/blog/1",
   },
   {
     id: 12,
@@ -105,7 +105,7 @@ const Data = [
       "Vokalia and Consonantia, there live the blind texts. Separated they live.",
     date: "March 14, 2023",
     image: "/images/4.png",
-    path: "/",
+    path: "/blog/1",
   },
   {
     id: 13,
@@ -114,7 +114,7 @@ const Data = [
       "Vokalia and Consonantia, there live the blind texts. Separated they live.",
     date: "March 14, 2023",
     image: "/images/1.png",
-    path: "/",
+    path: "/blog/1",
   },
   {
     id: 14,
@@ -123,7 +123,7 @@ const Data = [
       "Vokalia and Consonantia, there live the blind texts. Separated they live.",
     date: "March 14, 2023",
     image: "/images/2.png",
-    path: "/",
+    path: "/blog/1",
   },
   {
     id: 15,
@@ -132,7 +132,7 @@ const Data = [
       "Vokalia and Consonantia, there live the blind texts. Separated they live.",
     date: "March 14, 2023",
     image: "/images/3.png",
-    path: "/",
+    path: "/blog/1",
   },
   {
     id: 16,
@@ -141,7 +141,7 @@ const Data = [
       "Vokalia and Consonantia, there live the blind texts. Separated they live.",
     date: "March 14, 2023",
     image: "/images/4.png",
-    path: "/",
+    path: "/blog/1",
   },
 ];
 
