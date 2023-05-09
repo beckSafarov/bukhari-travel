@@ -2,10 +2,12 @@ import useResponsiveDesign from '@/hooks/useResponsiveDesign'
 import FullButton from '@/modules/common/Buttons/FullButton'
 import { TourCardDataTypes, TourInfoCardTypes } from '@/types'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
+import DeparturesTable from './DeparturesTable'
 
 const TourCard = ({ data }: { data: TourCardDataTypes }) => {
   const { isMobile, isTablet } = useResponsiveDesign()
+  const [showDepartures, setShowDepartures] = useState(false)
   const imageSize = isMobile ? 500 : isTablet ? 600 : 400
   const route = data.route.split(', ').join(' -> ')
 
@@ -38,7 +40,7 @@ const TourCard = ({ data }: { data: TourCardDataTypes }) => {
             {data.title}
           </h1>
           {/* Tour Info */}
-          <div className='flex space-x-2 py-2 border-l-4 border-red'>
+          <div className='flex space-x-2 py-2 border-l-4 border-orange'>
             {tourInfo.map((card: TourInfoCardTypes, i: number) => (
               <div
                 key={i}
@@ -65,11 +67,14 @@ const TourCard = ({ data }: { data: TourCardDataTypes }) => {
       <div className='flex md:flex-row xsm:flex-col md:space-x-2 xsm:space-y-2 pt-10 pb-5 justify-center md:items-end xsm:items-center'>
         <FullButton>View Tour</FullButton>
         <button
+          onClick={() => setShowDepartures(!showDepartures)}
           className={`text-black border-2 border-gray rounded-full py-[10px] md:px-5 xsm:px-3 text-sm hover:bg-orange hover:border-orange hover:text-white transition duration-450`}
         >
-          View Departures
+          {showDepartures ? 'Hide Departures' : 'View Departures'}
         </button>
       </div>
+
+      {showDepartures && <DeparturesTable data={data.tourDatesData} />}
     </div>
   )
 }

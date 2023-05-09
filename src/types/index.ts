@@ -76,10 +76,18 @@ export type TourInfoType = {
   price: number
 }
 
+export type TourDatesDataTypes={
+  id: string,
+  departingDate: string,
+  finishingDate: string,
+  isAvailable: boolean
+}
+
 export type TourCardDataTypes = {
   title: string
-  image: string,
+  image: string
   tourInfo: TourInfoType
-  route: string,
-  description: string,
+  route: string
+  description: string
+  tourDatesData: Array<TourDatesDataTypes>
 }

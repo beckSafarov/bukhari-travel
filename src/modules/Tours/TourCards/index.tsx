@@ -4,6 +4,7 @@ import TourCard from './TourCard'
 import { TourCardDataTypes } from '@/types'
 import cardsData from './cardsData'
 
+
 const TourCards = () => {
   return (
     <SectionsContainer className='py-20' size='sm'>
