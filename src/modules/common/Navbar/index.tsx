@@ -42,9 +42,11 @@ const Navbar = ({}) => {
             </div>
           </div>
           <div className='lg:block md:hidden sm:hidden xsm:hidden'>
-            <button className='text-white border-2 border-gray rounded-full py-1.5 px-5 text-sm hover:bg-orange hover:border-orange transition duration-450'>
-              Contact Us
-            </button>
+            <Link href='/contact'>
+              <button className='text-white border-2 border-gray rounded-full py-1.5 px-5 text-sm hover:bg-orange hover:border-orange transition duration-450'>
+                Contact Us
+              </button>
+            </Link>
           </div>
           <div className='flex space-x-6 w-fit lg:hidden'>
             {/* mobile accordion toggle button */}
