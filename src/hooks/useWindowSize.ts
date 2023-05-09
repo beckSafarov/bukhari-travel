@@ -49,6 +49,6 @@ export function useWindowSizeWithThrottling(seconds = 1000) {
     // Remove event listener on cleanup
     return () =>
       window.removeEventListener("resize", throttle(handleResize, seconds));
-  }, [seconds]); // Empty array ensures that effect is only run on mount
+  }, []); // Empty array ensures that effect is only run on mount
   return windowSize;
 }
