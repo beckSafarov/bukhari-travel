@@ -12,6 +12,7 @@ import { DestinationPageDataProps } from "@/interfaces";
 
 const DestinationPage = ({
   name,
+  label,
   title,
   shortInfoText,
   heroImage,
@@ -69,14 +70,13 @@ const DestinationPage = ({
 
       {/**Tours section end--------- */}
       <SectionsContainer>
-        {/**Highlights section start------- */}
         <div className="flex flex-col items-center">
           <Title className="py-6">{`Travel highlights of ${name}`}</Title>
           <p className="max-w-[50%] pb-6">{highlightsText}</p>
         </div>
       </SectionsContainer>
 
-      <ImageSlider name={name} photos={photos}/>
+      <ImageSlider name={name} photos={photos} />
       <SectionsContainer>
         <div className="flex flex-col items-center justify-center py-10 ">
           <div className="my-4">

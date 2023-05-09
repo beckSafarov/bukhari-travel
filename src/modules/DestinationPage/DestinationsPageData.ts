@@ -1,6 +1,7 @@
 const DestinationPageData = [
   {
     id: 1,
+    label: "tashkent",
     name: "Tashkent",
     title: "Tashkent Tours",
     heroImage: "",
@@ -22,6 +23,7 @@ const DestinationPageData = [
   },
   {
     id: 2,
+    label: "samarkand",
     name: "Samarkand",
     title: "Samarkand Tours",
     heroImage: "",
@@ -44,6 +46,7 @@ const DestinationPageData = [
 
   {
     id: 3,
+    label: "bukhara",
     name: "Bukhara",
     title: "Bukhara Tours",
     heroImage: "",
@@ -65,6 +68,7 @@ const DestinationPageData = [
   },
   {
     id: 4,
+    label: "khiva",
     name: "Khiva",
     title: "Khiva Tours",
     heroImage: "",

@@ -42,7 +42,7 @@ const DropDown = ({data, label}:DropDownProps) => {
               <Link
                 onClick={handleOutsideClick}
                 className={`py-2 px-2 text-black hover:text-orange rounded-md`}
-                href={`/Destinations/${MenuLink.label}`}
+                href={`/destination/${MenuLink.label.toLowerCase()}`}
               >
                 {MenuLink.label}
               </Link>

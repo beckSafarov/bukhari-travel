@@ -55,7 +55,7 @@ const ImageSlider = ({ photos, name }: ImageSliderProps) => {
   const settings = {
     dots: true,
     infinite: true,
-    slidesToShow: isTablet || isMobile ? 2 : 4,
+    slidesToShow: isMobile ? 2 : 4,
     slidesToScroll: 1,
     /* @ts-expect-error*/
     nextArrow: <SampleNextArrow />,

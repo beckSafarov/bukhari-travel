@@ -71,6 +71,7 @@ export interface ButtonProps {
 
 export interface DestinationPageDataProps {
   id: number;
+  label:string;
   name: string;
   title: string;
   heroImage: string;
