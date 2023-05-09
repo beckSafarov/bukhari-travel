@@ -6,6 +6,7 @@ import ContactUsPage from "@/modules/ContactUsPage";
 
 const data = {
   id: 1,
+  label: "tashkent",
   name: "Tashkent",
   title: "Tashkent Tours",
   heroImage: "",
@@ -31,12 +32,13 @@ const destination = () => {
   const router = useRouter();
   const { MenuLink: destName } = router.query;
   const el =
-    DestinationPageData.find((element) => element.name === destName) || data;
+    DestinationPageData.find((element) => element.label === destName) || data;
 
   return (
     <DestinationPage
       name={el.name}
       id={el.id}
+      label={el.label}
       title={el.title}
       heroImage={el.heroImage}
       shortInfoText={el.shortInfoText}
@@ -44,12 +46,6 @@ const destination = () => {
       video={el.video}
       photos={el.photos}
     />
-  );
-  return (
-    <div>
-      {el?.name}
-      hhaha
-    </div>
   );
 };
 

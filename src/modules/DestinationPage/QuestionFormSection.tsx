@@ -17,7 +17,7 @@ const QuestionFormSection = () => {
   };
   return (
     <div className="bg-gray-light items-center flex py-10">
-      <SectionsContainer>
+      <SectionsContainer size="sm">
         <Title className="py-4">Private Tour Enquiry</Title>
         <QuestionForm
           formRef={formRef}

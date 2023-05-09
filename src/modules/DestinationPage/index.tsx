@@ -12,6 +12,7 @@ import { DestinationPageDataProps } from "@/interfaces";
 
 const DestinationPage = ({
   name,
+  label,
   title,
   shortInfoText,
   heroImage,
@@ -23,24 +24,26 @@ const DestinationPage = ({
     <Layout>
       <StaticHero title={title} image="/images/hero_3.png" />
       {/* short information section start */}
-      <div className="flex flex-col items-center ">
-        <div className="max-w-[50%] pt-16 pb-8">
-          <center>
-            <p className="font-sans text-base "> {shortInfoText}</p>{" "}
-          </center>
+      <SectionsContainer size="sm">
+        <div className="flex flex-col items-center ">
+          <div className="max-w-[50%] pt-16 pb-8">
+            <center>
+              <p className="font-sans text-base "> {shortInfoText}</p>{" "}
+            </center>
+          </div>
+          <div className="pb-20">
+            <button className="px-24 py-2 rounded-full bg-orange text-white hover:brightness-110">
+              Contact Us
+            </button>
+          </div>
         </div>
-        <div className="pb-20">
-          <button className="px-24 py-2 rounded-full bg-orange text-white hover:brightness-110">
-            Contact Us
-          </button>
-        </div>
-      </div>
+      </SectionsContainer>
       {/* short information section end */}
 
       {/**Tours section start----- */}
 
       <div className="flex bg-gray-light items-center justify-center flex-col">
-        <SectionsContainer>
+        <SectionsContainer size="sm">
           <div className="flex items-center flex-col">
             <Title className="pt-8 pb-4 font-serif">
               {`${name} small group tours`}
@@ -66,25 +69,28 @@ const DestinationPage = ({
       </div>
 
       {/**Tours section end--------- */}
-
-      {/**Highlights section start------- */}
-      <div className="flex flex-col items-center">
-        <Title className="py-6">{`Travel highlights of ${name}`}</Title>
-        <p className="max-w-[50%] pb-6">{highlightsText}</p>
-      </div>
-      <ImageSlider />
-      <div className="flex flex-col items-center justify-center py-10 bg-gray-light">
-        <div className="my-4">
-          <SupTitle>INTRODUCTORY VIDEO</SupTitle>
+      <SectionsContainer>
+        <div className="flex flex-col items-center">
+          <Title className="py-6">{`Travel highlights of ${name}`}</Title>
+          <p className="max-w-[50%] pb-6">{highlightsText}</p>
         </div>
-        <iframe
-          width="560"
-          height="315"
-          src={video}
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"
-        ></iframe>
-      </div>
+      </SectionsContainer>
+
+      <ImageSlider name={name} photos={photos} />
+      <SectionsContainer>
+        <div className="flex flex-col items-center justify-center py-10 ">
+          <div className="my-4">
+            <SupTitle>INTRODUCTORY VIDEO</SupTitle>
+          </div>
+          <iframe
+            width="560"
+            height="315"
+            src={video}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"
+          ></iframe>
+        </div>
+      </SectionsContainer>
       <QuestionFormSection />
       {/**Highlights section end--------- */}
     </Layout>
