@@ -67,7 +67,7 @@ const ImageSlider = ({ photos, name }: ImageSliderProps) => {
       <SectionsContainer>
         <div className="  max-h-[400px]">
           <div className="flex items-center justify-center ">
-            <Title className="">{name} in photos</Title>
+            <Title>{name} in photos</Title>
           </div>
           <Slider {...settings} className=" ">
             {photos.map((image, index) => {

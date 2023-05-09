@@ -1,8 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
-import DestinationPage from "@/modules/DestinationPage";
-import DestinationPageData from "@/modules/DestinationPage/DestinationsPageData";
-import ContactUsPage from "@/modules/ContactUsPage";
+import Destination from "@/modules/Destination";
+import DestData from "@/modules/Destination/DestinationData";
 
 const data = {
   id: 1,
@@ -26,16 +25,16 @@ const data = {
   ],
   video: "https://www.youtube.com/embed/2V-2ABkUREE?showInfo=0",
 };
-const destination = () => {
+const DestinationPage = () => {
   /* eslint-disable-next-line
       react-hooks/rules-of-hooks */
   const router = useRouter();
-  const { MenuLink: destName } = router.query;
+  const { city: destName } = router.query;
   const el =
-    DestinationPageData.find((element) => element.label === destName) || data;
+    DestData.find((element) => element.label === destName) || data;
 
   return (
-    <DestinationPage
+    <Destination
       name={el.name}
       id={el.id}
       label={el.label}
@@ -49,4 +48,4 @@ const destination = () => {
   );
 };
 
-export default destination;
+export default DestinationPage;

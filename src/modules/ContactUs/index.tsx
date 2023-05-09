@@ -8,7 +8,6 @@ import SupTitle from "../common/Typography/SupTitle";
 import SubTitle from "../common/Typography/SubTitle";
 import { MdLocationOn, MdOutlineEmail, MdCall } from "react-icons/md";
 import { GoClock } from "react-icons/go";
-import FullButton from "../common/Buttons/FullButton";
 
 const ContactUsPage = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -22,7 +21,7 @@ const ContactUsPage = () => {
     formRef.current?.submit();
   };
   return (
-    <Layout>
+    <Layout title='Contact | Bukhari Travel'>
       <StaticHero
         title="Contact Us"
         subtitle="Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts."

@@ -1,4 +1,4 @@
-const DestinationPageData = [
+const DestinationData = [
   {
     id: 1,
     label: "tashkent",
@@ -89,4 +89,4 @@ const DestinationPageData = [
     video: "https://www.youtube.com/embed/59BI8V0TtYk?showInfo=0",
   },
 ];
-export default DestinationPageData;
+export default DestinationData;

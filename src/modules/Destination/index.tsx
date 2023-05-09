@@ -10,7 +10,7 @@ import FullButton from "../common/Buttons/FullButton";
 import Title from "../common/Typography/Title";
 import { DestinationPageDataProps } from "@/interfaces";
 
-const DestinationPage = ({
+const Destination = ({
   name,
   label,
   title,
@@ -21,7 +21,7 @@ const DestinationPage = ({
   photos,
 }: DestinationPageDataProps) => {
   return (
-    <Layout>
+    <Layout title={title}>
       <StaticHero title={title} image="/images/hero_3.png" />
       {/* short information section start */}
       <SectionsContainer size="sm">
@@ -97,4 +97,4 @@ const DestinationPage = ({
   );
 };
 
-export default DestinationPage;
+export default Destination;

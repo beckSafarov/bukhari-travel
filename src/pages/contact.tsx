@@ -1,5 +1,5 @@
 import React from "react";
-import ContactUsPage from "@/modules/ContactUsPage";
+import ContactUsPage from "@/modules/ContactUs";
 
 const contactUs = () => <ContactUsPage />;
 
