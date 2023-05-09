@@ -45,12 +45,6 @@ const destination = () => {
       photos={el.photos}
     />
   );
-  return (
-    <div>
-      {el?.name}
-      hhaha
-    </div>
-  );
 };
 
 export default destination;
