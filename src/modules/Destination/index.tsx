@@ -8,6 +8,7 @@ import ImageSlider from "./ImageSlider"
 import SectionsContainer from "../common/SectionsContainer"
 import Title from "../common/Typography/Title"
 import { DestinationPageDataProps } from "@/interfaces"
+import Link from "next/link";
 
 const Destination = ({
   name,
@@ -31,9 +32,11 @@ const Destination = ({
             </center>
           </div>
           <div className='pb-20'>
-            <button className='px-24 py-2 rounded-full bg-orange text-white hover:brightness-110'>
-              Contact Us
-            </button>
+            <Link href='/contact'>
+              <button className='px-24 py-2 rounded-full bg-orange text-white hover:brightness-110'>
+                Contact Us
+              </button>
+            </Link>
           </div>
         </div>
       </SectionsContainer>
