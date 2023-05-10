@@ -1,16 +1,18 @@
-import React from "react";
-import Image from "next/image";
-import { CiLocationOn, CiMenuBurger } from "react-icons/ci";
+import React from "react"
+import Image from "next/image"
+import { CiLocationOn, CiMenuBurger } from "react-icons/ci"
+import useResponsiveDesign from "@/hooks/useResponsiveDesign";
 
 const Card = () => {
+  const { isDesktop, isBigScreen } = useResponsiveDesign();
   return (
-    <div className="max-w-[250px] bg-white cursor-pointer">
+    <div className="max-w-[300px] bg-white cursor-pointer justify-self-center">
       <div>
         {/**image wrapper */}
         <Image
-          width={250}
+          width={300}
           height={150}
-          alt="iamge"
+          alt="image"
           src="/images/10.png"
           className="hover:scale-105 ease-in-out transition-all duration-500"
         />
