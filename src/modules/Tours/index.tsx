@@ -6,7 +6,7 @@ import TourCards from './TourCards'
 const Tours = () => {
   return (
     <Layout title='Tours'>
-      <StaticHero title='Tours' image='/images/hero_2.png' />
+      <StaticHero title='Tours' image='/images/hero_3.png' />
       <TourCards/>
     </Layout>
   )
