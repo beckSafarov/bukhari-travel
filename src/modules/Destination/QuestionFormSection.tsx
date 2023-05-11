@@ -1,8 +1,8 @@
-import React, { useRef, FormEvent } from "react";
-import SectionsContainer from "../common/SectionsContainer";
-import QuestionForm from "../common/QuestionForm";
+import React, { useRef, FormEvent } from 'react'
+import SectionsContainer from '../common/SectionsContainer'
+import QuestionForm from "../common/QuestionForm"
 
-import Title from "../common/Typography/Title";
+import Title from "../common/Typography/Title"
 
 const QuestionFormSection = () => {
   const formRef = useRef<HTMLFormElement>(null);

@@ -1,11 +1,11 @@
-import React from "react";
-import Slider from "react-slick";
-import Image from "next/image";
-import useResponsiveDesign from "@/hooks/useResponsiveDesign";
-import Title from "../common/Typography/Title";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import SectionsContainer from "../common/SectionsContainer";
+import React from "react"
+import Slider from "react-slick"
+import Image from "next/image"
+import useResponsiveDesign from "@/hooks/useResponsiveDesign"
+import Title from "../common/Typography/Title"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+import SectionsContainer from "../common/SectionsContainer"
 
 type ArrowIconType = {
   onClick: (c: any) => void;
@@ -51,12 +51,13 @@ function SamplePrevArrow(props: ArrowIconType) {
 }
 
 const ImageSlider = ({ photos, name }: ImageSliderProps) => {
-  const { isTablet, isMobile } = useResponsiveDesign();
+  const { isPhablet, isMobile } = useResponsiveDesign();
   const settings = {
     dots: true,
     infinite: true,
-    slidesToShow: isMobile ? 2 : 4,
+    slidesToShow: isPhablet ? 2 : isMobile ? 1 : 3,
     slidesToScroll: 1,
+    arrows: isMobile ? false : true,
     /* @ts-expect-error*/
     nextArrow: <SampleNextArrow />,
     /* @ts-expect-error*/
@@ -64,8 +65,8 @@ const ImageSlider = ({ photos, name }: ImageSliderProps) => {
   };
   return (
     <div className="bg-gray-light bg-opacity-60  py-10 mt-16">
-      <SectionsContainer>
-        <div className="  max-h-[400px]">
+      <SectionsContainer size='sm'>
+        <div className="">
           <div className="flex items-center justify-center ">
             <Title>{name} in photos</Title>
           </div>
