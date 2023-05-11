@@ -7,6 +7,7 @@ import { BlogCardType } from '@/types'
 import { blogCards } from './BlogCardsData'
 
 const BlogSection = () => {
+  
   return (
     <SectionsContainer className="py-24">
       <div className="flex flex-col space-y-3">
