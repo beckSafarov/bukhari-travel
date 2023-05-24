@@ -21,11 +21,13 @@ export interface StaticHeroProps {
   title: string;
   subtitle?: string;
   image?: string;
+  size?: string,
 }
 export interface SectionsContainerProps {
   children: React.ReactNode;
   className: string;
   size: "lg" | "sm";
+  id?: string,
 }
 
 export interface TestimonialsCardProps {
@@ -61,6 +63,8 @@ export interface SidebarProps {
 export interface FAQProps {
   data: Array<FAQType>;
   className?: string;
+  bordered?: boolean;
+  noHighlight?: boolean;
 }
 
 export interface ButtonProps {
@@ -79,4 +83,9 @@ export interface DestinationPageDataProps {
   highlightsText: string;
   photos: Array<string>;
   video: string;
+}
+
+export interface ImagesSlider {
+  photos: Array<string>,
+  className?: string
 }

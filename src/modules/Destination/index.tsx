@@ -52,7 +52,7 @@ const Destination = ({
         </div>
       </SectionsContainer>
 
-      <ImageSlider name={name} photos={photos} />
+      <ImageSlider title={`${name} in photos`} photos={photos} />
       <VideoSection video={video} />
       <QuestionFormSection />
     </Layout>

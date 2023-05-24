@@ -15,7 +15,7 @@ type ArrowIconType = {
 
 type ImageSliderProps = {
   photos: Array<string>;
-  name: string;
+  title?: string,
 };
 
 function SampleNextArrow(props: ArrowIconType) {
@@ -50,7 +50,7 @@ function SamplePrevArrow(props: ArrowIconType) {
   );
 }
 
-const ImageSlider = ({ photos, name }: ImageSliderProps) => {
+const ImageSlider = ({ photos, title }: ImageSliderProps) => {
   const { isPhablet, isMobile } = useResponsiveDesign();
   const settings = {
     dots: true,
@@ -68,7 +68,7 @@ const ImageSlider = ({ photos, name }: ImageSliderProps) => {
       <SectionsContainer size='sm'>
         <div className="">
           <div className="flex items-center justify-center ">
-            <Title>{name} in photos</Title>
+            <Title>{title}</Title>
           </div>
           <Slider {...settings} className=" ">
             {photos.map((image, index) => {
@@ -77,7 +77,7 @@ const ImageSlider = ({ photos, name }: ImageSliderProps) => {
                   key={index}
                   width={150}
                   height={80}
-                  alt="iamge"
+                  alt="image"
                   src={image}
                   className="hover:scale-105 cursor-pointer ease-in-out p-4 transition-all duration-500"
                 />

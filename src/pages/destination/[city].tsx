@@ -34,17 +34,7 @@ const DestinationPage = () => {
     DestData.find((element) => element.label === destName) || data;
 
   return (
-    <Destination
-      name={el.name}
-      id={el.id}
-      label={el.label}
-      title={el.title}
-      heroImage={el.heroImage}
-      shortInfoText={el.shortInfoText}
-      highlightsText={el.highlightsText}
-      video={el.video}
-      photos={el.photos}
-    />
+    <Destination {...el}/>
   );
 };
 

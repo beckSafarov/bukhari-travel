@@ -4,6 +4,7 @@ import { TourCardDataTypes, TourInfoCardTypes } from '@/types'
 import Image from 'next/image'
 import React, { useState } from 'react'
 import DeparturesTable from './DeparturesTable'
+import Link from 'next/link'
 
 const TourCard = ({ data }: { data: TourCardDataTypes }) => {
   const { isMobile, isTablet } = useResponsiveDesign()
@@ -65,7 +66,9 @@ const TourCard = ({ data }: { data: TourCardDataTypes }) => {
       </div>
       {/* buttons */}
       <div className='flex md:flex-row xsm:flex-col md:space-x-2 xsm:space-y-2 pt-10 pb-5 justify-center md:items-end xsm:items-center'>
-        <FullButton>View Tour</FullButton>
+        <Link href='/tours/1'>
+          <FullButton>View Tour</FullButton>
+        </Link>
         <button
           onClick={() => setShowDepartures(!showDepartures)}
           className={`text-black border-2 border-gray rounded-full py-[10px] md:px-5 xsm:px-3 text-sm hover:bg-orange hover:border-orange hover:text-white transition duration-450`}
