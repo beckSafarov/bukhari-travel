@@ -4,11 +4,13 @@ import AboutUsSection from "./AboutUsSection";
 import DestinationsSection from "./DestinationsSection";
 import ForCustomerSection from "./ForCustomersSection";
 import BlogSection from "./BlogSection";
+import { HomeDataTypes } from '@/types/HomeTypes';
 
 
-export default function HomeScreen() {
+export default function HomeScreen({data}:{data:HomeDataTypes}) {
+  console.log(data)
   return (
-    <Layout title="Al Bukhari Travel">
+    <Layout title={data.pageTitle}>
       <Hero />
       <AboutUsSection />
       <DestinationsSection />
