@@ -10,7 +10,7 @@ import { HomeDataTypes } from '@/types/HomeTypes';
 export default function HomeScreen({data}:{data:HomeDataTypes}) {
   console.log(data)
   return (
-    <Layout title={data.pageTitle}>
+    <Layout title={data?.pageTitle || 'Bukhari Travel'}>
       <Hero />
       <AboutUsSection />
       <DestinationsSection />
