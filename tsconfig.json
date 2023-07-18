@@ -18,7 +18,7 @@
       "@/*": ["./src/*"],
       "@/common":["./src/modules/common/*"],
       "@/modules":["./src/modules/*"],
-      "@/utils":["./src/modules/utils/*"],
+      "@/utils":["./src/utils/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

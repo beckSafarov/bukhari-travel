@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import TestimonialCard from '@/modules/common/Testimonials/TestimonialCard'
 import Title from '@/modules/common/Typography/Title'
 import SupTitle from '@/modules/common/Typography/SupTitle'
-import { TestimonialsSliderSettings } from '@/modules/utils/settings'
+import { TestimonialsSliderSettings } from '@/utils/settings'
 import TestimonialsData from '@/modules/common/Testimonials/TestimonialsData'
 const settings = TestimonialsSliderSettings
 

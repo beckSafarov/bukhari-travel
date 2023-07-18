@@ -1,4 +1,4 @@
-import { mobileSideSpacing } from '@/modules/utils'
+import { mobileSideSpacing } from '@/utils/index'
 import React from 'react'
 import Title from '../Typography/Title'
 import useResponsiveDesign from '@/hooks/useResponsiveDesign'

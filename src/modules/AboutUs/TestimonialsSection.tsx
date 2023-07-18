@@ -1,7 +1,7 @@
 import React from 'react'
 import SectionsContainer from '../common/SectionsContainer'
 import Title from '../common/Typography/Title'
-import { TestimonialsSliderSettings } from '../utils/settings'
+import { TestimonialsSliderSettings } from '../../utils/settings'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'

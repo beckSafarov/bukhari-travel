@@ -89,3 +89,18 @@ export interface ImagesSlider {
   photos: Array<string>,
   className?: string
 }
+
+export interface ModalProps {
+  onClose(): void, 
+  isOpen: boolean,
+  className?: string,
+  title: string,
+  children: React.ReactNode
+}
+export interface PaymentModalProps {
+  onClose(): void, 
+  isOpen: boolean,
+  className?: string,
+  title: string,
+}
+

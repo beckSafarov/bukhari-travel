@@ -9,6 +9,7 @@ const Accordion = ({ children, content, contentClass }: AccordionProps) => {
     <div>
       <Disclosure>
         <Disclosure.Button className='py-2'>{children}</Disclosure.Button>
+
         <Transition
           enter='transition duration-100 ease-out'
           enterFrom='transform scale-95 opacity-0'

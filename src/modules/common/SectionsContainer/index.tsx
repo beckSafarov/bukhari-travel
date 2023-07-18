@@ -1,5 +1,5 @@
 import { SectionsContainerProps } from '@/interfaces'
-import { mobileSideSpacing, smallMobileSideSpacing } from '@/modules/utils'
+import { mobileSideSpacing, smallMobileSideSpacing } from '@/utils/index'
 import React from 'react'
 const bigMaxWidth = process.env.NEXT_PUBLIC_MAX_WIDTH
 const smMaxWidth = process.env.NEXT_PUBLIC_MAX_BLOG_WIDTH
