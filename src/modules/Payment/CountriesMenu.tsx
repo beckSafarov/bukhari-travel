@@ -56,7 +56,7 @@ const CountriesMenu = () => {
       <option value='CD'>Congo, the Democratic Republic of the</option>
       <option value='CK'>Cook Islands</option>
       <option value='CR'>Costa Rica</option>
-      <option value='CI'>Cote d'Ivoire</option>
+      <option value='CI'>Cote d&apos;Ivoire</option>
       <option value='HR'>Croatia</option>
       <option value='CU'>Cuba</option>
       <option value='CW'>Cura�ao</option>
