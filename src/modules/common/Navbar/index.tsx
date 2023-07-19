@@ -13,7 +13,7 @@ const Navbar = ({}) => {
   const [mobileMenuClicked, setMobileMenuClicked] = useState(false)
   return (
     <>
-      <div className={'absolute top-5 w-full h-20 py-30 z-10'}>
+      <div className={'absolute top-5 w-full h-20 py-30 z-10' }>
         <div
           className={`my-0 mx-auto flex items-center justify-between  ${mobileSideSpacing}`}
           style={{ maxWidth: `${maxWidth}px` }}

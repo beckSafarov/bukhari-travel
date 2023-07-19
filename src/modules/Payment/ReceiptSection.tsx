@@ -1,14 +1,20 @@
 import React, { useState } from 'react'
 import { FadeLoader } from 'react-spinners'
 import FullFadeLoader from '../common/Loaders/FullFadeLoader'
+import { useRouter } from 'next/router'
 
 const ReceiptSection = () => {
   const [agreed, setAgreed] = useState(false)
   const [loading, setLoading] = useState(false)
   const btnBg = agreed ? 'bg-orange' : 'bg-orange-md'
-
+  const router = useRouter()
   const handlePay = () => {
-    setLoading(!loading)
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+      setAgreed(false)
+      router.push('/payment-success?code=ewfwefewfwefwefwf&id=i23io23u8foiefio2u3289')
+    }, 5000);
   }
 
   return (
