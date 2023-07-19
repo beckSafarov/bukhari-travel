@@ -1,4 +1,4 @@
-import chunk from 'lodash/chunk'
+import chunk from 'lodash.chunk'
 
 export const mobileSideSpacing = 'xl:px-0 lg:px-20 md:px-20 sm:px-4 xsm:px-4'
 export const smallMobileSideSpacing =
